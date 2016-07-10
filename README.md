@@ -1,20 +1,20 @@
 # drum
 
-FIXME: description
+A sample project that used Clojure for REST API, OAUTH2 and dynamic generated documentation
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://gitlab.com/condur/drum.
 
 ## Usage
 
-FIXME: explanation
+Install JVM and run from command line
 
-    $ java -jar drum-0.1.0-standalone.jar [args]
+    $ java -jar drum-0.1.0.jar [args]
 
 ## Options
 
-FIXME: listing of options this app accepts.
+...
 
 ## Examples
 
@@ -24,13 +24,8 @@ FIXME: listing of options this app accepts.
 
 ...
 
-### Any Other Sections
-### That You Think
-### Might be Useful
-
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0.
