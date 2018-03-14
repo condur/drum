@@ -30,7 +30,7 @@ func main() {
 	// res = solveMeFirst(a, b)
 	// fmt.Println(res)
 
-	arr := []int{1, 2, 3, 4, 110, 6, 7, 8, 9}
-	res := sorting.Buble(arr)
+	arr := []int{1, 2, 3, 4, 110, 6, 7, 8, -9}
+	res := sorting.Selection(arr)
 	fmt.Println(res)
 }
