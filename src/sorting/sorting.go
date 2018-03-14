@@ -1,6 +1,7 @@
 // Package sorting is a collection of algorithms related to sorting collections
 package sorting
 
+// Find the min item and its index in the array
 func min(arr []int, startIdx int) (minIdx int, min int) {
 	minIdx, min = startIdx, arr[startIdx]
 	for idx := startIdx; idx < len(arr); idx++ {
@@ -35,6 +36,21 @@ func Buble(arr []int) []int {
 		if swapped == false {
 			break
 		}
+	}
+	return arr
+}
+
+// Insertion - is a simple sorting algorithm that builds the final sorted array one item at a time.
+func Insertion(arr []int) []int {
+	var key int
+	for i := 1; i < len(arr); i++ {
+		key = arr[i]
+		j := i - 1
+		for j >= 0 && arr[j] > key {
+			arr[j+1] = arr[j]
+			j--
+		}
+		arr[j+1] = key
 	}
 	return arr
 }

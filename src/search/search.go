@@ -14,9 +14,7 @@ func Linear(x int, arr []int) int {
 
 // Binary - find if item x exists is the array, return if the item exists or not
 func Binary(x int, arr []int) bool {
-	idxStart := 0
-	idxEnd := len(arr) - 1
-
+	idxStart, idxEnd := 0, len(arr)-1
 	for idxStart <= idxEnd {
 		median := (idxStart + idxEnd) / 2
 		switch {

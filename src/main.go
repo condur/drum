@@ -31,6 +31,6 @@ func main() {
 	// fmt.Println(res)
 
 	arr := []int{1, 2, 3, 4, 110, 6, 7, 8, -9}
-	res := sorting.Selection(arr)
+	res := sorting.Insertion(arr)
 	fmt.Println(res)
 }
