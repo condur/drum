@@ -35,10 +35,9 @@ func Binary(x int, arr []int) bool {
 // elements in place of searching all elements.
 func Jump(x int, arr []int, step int) bool {
 	for idx := 0; idx < len(arr); idx = idx + step {
-		switch {
-		case x == arr[idx]:
+		if x == arr[idx] {
 			return true
-		case x < arr[idx]:
+		} else if x < arr[idx] {
 			startIdx := idx - step
 			if startIdx < 0 {
 				startIdx = 0
@@ -48,6 +47,7 @@ func Jump(x int, arr []int, step int) bool {
 					return true
 				}
 			}
+			break
 		}
 	}
 	return false

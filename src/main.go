@@ -1,7 +1,8 @@
 package main
 
 import (
-	"./search"
+	// "./search"
+	"./sorting"
 	"fmt"
 )
 
@@ -29,7 +30,7 @@ func main() {
 	// res = solveMeFirst(a, b)
 	// fmt.Println(res)
 
-	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	res := search.Jump(9, arr, 4)
+	arr := []int{1, 2, 3, 4, 110, 6, 7, 8, 9}
+	res := sorting.Selection(arr)
 	fmt.Println(res)
 }
