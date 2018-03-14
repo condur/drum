@@ -30,6 +30,6 @@ func main() {
 	// fmt.Println(res)
 
 	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	res := search.Binary(4, arr)
+	res := search.Jump(9, arr, 4)
 	fmt.Println(res)
 }
