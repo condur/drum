@@ -23,8 +23,9 @@ func LongestIncreasingSubsequence(arr []int) (maximum int) {
 		lis[idx] = 1
 	}
 
+	var localMax int
 	for i := 1; i < len(arr); i++ {
-		localMax := lis[i]
+		localMax = lis[i]
 		for j := 0; j < i; j++ {
 			if arr[j] < arr[i] {
 				localMax = max(localMax, lis[j]+1)
@@ -42,8 +43,9 @@ func MaxSumIncreasingSubSequence(arr []int) (maximum int) {
 	msis := make([]int, len(arr))
 	copy(msis, arr)
 
+	var localSum int
 	for i := 1; i < len(arr); i++ {
-		localSum := arr[i]
+		localSum = msis[i]
 		for j := 0; j < i; j++ {
 			if arr[j] < arr[i] {
 				localSum = max(msis[j]+msis[i], msis[i])
