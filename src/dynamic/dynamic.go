@@ -22,7 +22,7 @@ func LongestIncreasingSubsequence(arr []int) (maximum int) {
 
 	for i := 1; i < len(arr); i++ {
 		localMax, found := 0, false
-		for j := i - 1; j >= 0; j-- {
+		for j := 0; j < i; j++ {
 			if arr[j] < arr[i] {
 				localMax = max(localMax, lis[j])
 				found = true
