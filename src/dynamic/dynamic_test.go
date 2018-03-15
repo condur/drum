@@ -35,7 +35,7 @@ func TestMax(t *testing.T) {
 	for _, table := range tables {
 		maximum := max(table.x, table.y)
 		if maximum != table.res {
-			t.Errorf("Maxß of (%d, %d) was incorrect, got: %d, want: %d.", table.x, table.y, maximum, table.res)
+			t.Errorf("Max of (%d, %d) was incorrect, got: %d, want: %d.", table.x, table.y, maximum, table.res)
 		}
 	}
 }
@@ -47,5 +47,15 @@ func TestLIS(t *testing.T) {
 
 	if got != want {
 		t.Errorf("Longest Increasing Subsequence is incorrect, got: %d, want: %d.", got, want)
+	}
+}
+
+func TestMSIS(t *testing.T) {
+	arr := []int{1, 101, 2, 3, 100, 4, 5}
+	want := 106
+	got := MaxSumIncreasingSubSequence(arr)
+
+	if got != want {
+		t.Errorf("Max Sum Increasing SubSequence is incorrect, got: %d, want: %d.", got, want)
 	}
 }

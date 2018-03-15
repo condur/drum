@@ -29,7 +29,7 @@ func main() {
 	// res = solveMeFirst(a, b)
 	// fmt.Println(res)
 
-	arr := []int{10, 22, 9, 33, 21, 50, 41, 60, 80}
-	res := dynamic.LongestIncreasingSubsequence(arr)
+	arr := []int{1, 101, 2, 3, 100, 4, 5}
+	res := dynamic.MaxSumIncreasingSubSequence(arr)
 	fmt.Println(res)
 }
