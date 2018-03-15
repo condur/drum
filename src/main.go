@@ -1,8 +1,7 @@
 package main
 
 import (
-	// "./search"
-	"./sorting"
+	"./dynamic"
 	"fmt"
 )
 
@@ -30,7 +29,7 @@ func main() {
 	// res = solveMeFirst(a, b)
 	// fmt.Println(res)
 
-	arr := []int{1, 2, 3, 4, 110, 6, 7, 8, -9}
-	res := sorting.Insertion(arr)
+	arr := []int{10, 22, 9, 33, 21, 50, 41, 60, 80}
+	res := dynamic.LongestIncreasingSubsequence(arr)
 	fmt.Println(res)
 }
