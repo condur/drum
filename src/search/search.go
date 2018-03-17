@@ -2,6 +2,11 @@
 // e.g. Given a sorted array arr[] of n elements, write a function to search a given element x in arr[].
 package search
 
+import (
+	// "fmt"
+	"math"
+)
+
 // Linear - find if item x exists is the array, return the index of the item or -1
 func Linear(x int, arr []int) int {
 	for idx, item := range arr {
@@ -27,6 +32,30 @@ func Binary(x int, arr []int) bool {
 		}
 	}
 	return false
+}
+
+func sqrt(x int) int {
+	// Handle edge cases
+	switch x {
+	case 0, 1:
+		return x
+	}
+
+	const precision = 1e-5
+	start, end := float64(0), float64(x)
+	var median float64
+	for math.Abs(end-start) > precision {
+		median = (start + end) / 2
+		medianSquare := int(median * median)
+		if medianSquare == x {
+			break
+		} else if medianSquare < x {
+			start = median
+		} else {
+			end = median
+		}
+	}
+	return int(median)
 }
 
 // Jump - find if item x exists is the array by jumping ahead by fixed steps or skipping some
