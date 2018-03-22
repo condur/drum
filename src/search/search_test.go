@@ -26,6 +26,7 @@ func TestBinary(t *testing.T) {
 		want bool
 	}{
 		{[]int{1, 2, 3, 4, 5}, 2, true},
+		{[]int{1, 2, 3, 4, 5, 6}, 6, true},
 		{[]int{1, 2, 3, 4, 5}, 10000, false},
 	}
 	for _, table := range tables {
@@ -68,6 +69,58 @@ func TestSQRT(t *testing.T) {
 		got := sqrt(table.x)
 		if got != table.want {
 			t.Errorf("SQRT of %d was incorrect, got: %d, want: %d.", table.x, got, table.want)
+		}
+	}
+}
+
+func TestFindPivot(t *testing.T) {
+	tables := []struct {
+		arr  []int
+		want int
+	}{
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 6},
+		{[]int{8, 9, 1, 2, 4, 5, 6, 7}, 2},
+		{[]int{4, 5, 6, 7, 0, 1, 2}, 4},
+		{[]int{4, 5, 6, 7, 0}, 4},
+		{[]int{4, 5, 6, 7, 8, 9}, -1},
+		{[]int{}, -1},
+		{[]int{1}, -1},
+		{[]int{1, 0}, 1},
+		{[]int{1, 2}, -1},
+		{[]int{3, 0, 1}, 1},
+	}
+	for _, table := range tables {
+		got := findPivot(table.arr)
+		if got != table.want {
+			t.Errorf("Find pivot search was incorrect, got: %d, want: %d.", got, table.want)
+		}
+	}
+}
+
+func TestSearchRotatedSortedDistinctArr(t *testing.T) {
+	tables := []struct {
+		arr  []int
+		x    int
+		want bool
+	}{
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 1, true},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 20, false},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 4, true},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 6, true},
+		{[]int{8, 9, 1, 2, 4, 5, 6, 7}, 2, true},
+		{[]int{4, 5, 6, 7, 0, 1, 2}, 4, true},
+		{[]int{4, 5, 6, 7, 0}, 4, true},
+		{[]int{4, 5, 6, 7, 8, 9}, 5, true},
+		{[]int{}, -1, false},
+		{[]int{1}, -1, false},
+		{[]int{1, 0}, 1, true},
+		{[]int{1, 2}, -1, false},
+		{[]int{3, 0, 1}, 1, true},
+	}
+	for _, table := range tables {
+		got := searchRotatedSortedDistinctArr(table.x, table.arr)
+		if got != table.want {
+			t.Errorf("Rotated Sorted Distinct array search of %d was incorrect, got: %t, want: %t.", table.x, got, table.want)
 		}
 	}
 }

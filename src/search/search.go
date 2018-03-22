@@ -58,6 +58,42 @@ func sqrt(x int) int {
 	return int(median)
 }
 
+//```````````````````````````````````Search Rotated Sorted Distinct`````````````````````````````````
+
+func findPivot(arr []int) int {
+	var median int
+	idxStart, idxEnd := 0, len(arr)-1
+	for idxStart <= idxEnd {
+		median = (idxStart + idxEnd) / 2
+		if arr[median] >= arr[idxStart] && arr[median] >= arr[idxEnd] {
+			idxStart = median + 1
+		} else if arr[median] <= arr[idxStart] && arr[median] <= arr[idxEnd] {
+			idxEnd = median
+		} else {
+			idxEnd = median - 1
+		}
+	}
+	if median == 0 {
+		return -1
+	}
+	return median
+}
+
+func searchRotatedSortedDistinctArr(target int, arr []int) bool {
+	pivot := findPivot(arr)
+
+	if pivot == -1 {
+		return Binary(target, arr)
+	} else if arr[pivot] == target {
+		return true
+	} else if Binary(target, arr[:pivot]) == true {
+		return true
+	}
+	return Binary(target, arr[pivot:])
+}
+
+//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Search Rotated Sorted Distinct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
 // Jump - find if item x exists is the array by jumping ahead by fixed steps or skipping some
 // elements in place of searching all elements.
 func Jump(x int, arr []int, step int) bool {
