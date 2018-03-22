@@ -18,20 +18,20 @@ func Linear(x int, arr []int) int {
 }
 
 // Binary - find if item x exists is the array, return if the item exists or not
-func Binary(x int, arr []int) bool {
+func Binary(x int, arr []int) int {
 	idxStart, idxEnd := 0, len(arr)-1
 	for idxStart <= idxEnd {
 		median := (idxStart + idxEnd) / 2
 		switch {
 		case arr[median] == x:
-			return true
+			return median
 		case arr[median] < x:
 			idxStart = median + 1
 		default:
 			idxEnd = median - 1
 		}
 	}
-	return false
+	return -1
 }
 
 func sqrt(x int) int {
@@ -79,17 +79,18 @@ func findPivot(arr []int) int {
 	return median
 }
 
-func searchRotatedSortedDistinctArr(target int, arr []int) bool {
+func searchRotatedSortedDistinctArr(target int, arr []int) int {
 	pivot := findPivot(arr)
-
 	if pivot == -1 {
 		return Binary(target, arr)
 	} else if arr[pivot] == target {
-		return true
-	} else if Binary(target, arr[:pivot]) == true {
-		return true
+		return pivot
+	} else if x := Binary(target, arr[:pivot]); x != -1 {
+		return x
+	} else if x := Binary(target, arr[pivot:]); x != -1 {
+		return x + pivot
 	}
-	return Binary(target, arr[pivot:])
+	return -1
 }
 
 //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Search Rotated Sorted Distinct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

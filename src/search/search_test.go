@@ -23,16 +23,16 @@ func TestBinary(t *testing.T) {
 	tables := []struct {
 		arr  []int
 		x    int
-		want bool
+		want int
 	}{
-		{[]int{1, 2, 3, 4, 5}, 2, true},
-		{[]int{1, 2, 3, 4, 5, 6}, 6, true},
-		{[]int{1, 2, 3, 4, 5}, 10000, false},
+		{[]int{1, 2, 3, 4, 5}, 2, 1},
+		{[]int{1, 2, 3, 4, 5, 6}, 6, 5},
+		{[]int{1, 2, 3, 4, 5}, 10000, -1},
 	}
 	for _, table := range tables {
 		got := Binary(table.x, table.arr)
 		if got != table.want {
-			t.Errorf("Binary search of %d was incorrect, got: %t, want: %t.", table.x, got, table.want)
+			t.Errorf("Binary search of %d was incorrect, got: %d, want: %d.", table.x, got, table.want)
 		}
 	}
 }
@@ -101,26 +101,30 @@ func TestSearchRotatedSortedDistinctArr(t *testing.T) {
 	tables := []struct {
 		arr  []int
 		x    int
-		want bool
+		want int
 	}{
-		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 1, true},
-		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 20, false},
-		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 4, true},
-		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 6, true},
-		{[]int{8, 9, 1, 2, 4, 5, 6, 7}, 2, true},
-		{[]int{4, 5, 6, 7, 0, 1, 2}, 4, true},
-		{[]int{4, 5, 6, 7, 0}, 4, true},
-		{[]int{4, 5, 6, 7, 8, 9}, 5, true},
-		{[]int{}, -1, false},
-		{[]int{1}, -1, false},
-		{[]int{1, 0}, 1, true},
-		{[]int{1, 2}, -1, false},
-		{[]int{3, 0, 1}, 1, true},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 1, 6},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 10, -1},
+		{[]int{4, 5, 6, 7, 8, 9}, 10, -1},
+		{[]int{4, 5, 6, 7, 8, 9}, 9, 5},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 2, 7},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 9, 5},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 4, 0},
+		{[]int{4, 5, 6, 7, 8, 9, 1, 2}, 6, 2},
+		{[]int{8, 9, 1, 2, 4, 5, 6, 7}, 2, 3},
+		{[]int{4, 5, 6, 7, 0, 1, 2}, 4, 0},
+		{[]int{4, 5, 6, 7, 0}, 4, 0},
+		{[]int{4, 5, 6, 7, 8, 9}, 5, 1},
+		{[]int{}, -1, -1},
+		{[]int{1}, -1, -1},
+		{[]int{1, 0}, 1, 0},
+		{[]int{1, 2}, -1, -1},
+		{[]int{3, 0, 1}, 1, 2},
 	}
 	for _, table := range tables {
 		got := searchRotatedSortedDistinctArr(table.x, table.arr)
 		if got != table.want {
-			t.Errorf("Rotated Sorted Distinct array search of %d was incorrect, got: %t, want: %t.", table.x, got, table.want)
+			t.Errorf("Rotated Sorted Distinct array search of %d was incorrect, got: %d, want: %d.", table.x, got, table.want)
 		}
 	}
 }
