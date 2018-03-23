@@ -60,23 +60,23 @@ func sqrt(x int) int {
 
 //```````````````````````````````````Search Rotated Sorted Distinct`````````````````````````````````
 
-func findPivot(arr []int) int {
-	var median int
-	idxStart, idxEnd := 0, len(arr)-1
-	for idxStart <= idxEnd {
-		median = (idxStart + idxEnd) / 2
-		if arr[median] >= arr[idxStart] && arr[median] >= arr[idxEnd] {
-			idxStart = median + 1
-		} else if arr[median] <= arr[idxStart] && arr[median] <= arr[idxEnd] {
-			idxEnd = median
-		} else {
-			idxEnd = median - 1
-		}
+func findPivot(nums []int) int {
+	var mid int
+	begin, end := 0, len(nums)-1
+	for begin <= end {
+		mid = begin + (end-begin)/2
+		if nums[mid] >= nums[begin] && nums[mid] >= nums[end] {
+			begin = mid + 1
+		} else { //if nums[mid] <= nums[begin] && nums[mid] <= nums[end] {
+			end = mid
+		} //else {
+		// 	end = mid - 1
+		// }
 	}
-	if median == 0 {
+	if mid == 0 {
 		return -1
 	}
-	return median
+	return mid
 }
 
 func searchRotatedSortedDistinctArr(target int, arr []int) int {
