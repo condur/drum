@@ -47,6 +47,7 @@ class Search {
                 hi = mid;
             }
         }
+
         // Post-processing:
         // End Condition: left == right
         if (lo != nums.length && nums[lo] == target) {
