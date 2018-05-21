@@ -1,3 +1,3 @@
 # drum
 
-Playing with Go.
+Playing with Python.
