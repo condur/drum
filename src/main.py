@@ -1,26 +1,43 @@
-def factorial(n):
-    if n == 0:
-        return 1
-    return n * factorial(n - 1)
-
-
-def isArraylnSortedOrder(A):
-    if len(A) == 1:
-        return True
-    return A[0] <= A[1] and isArraylnSortedOrder(A[1:])
-
-
 def increment(nums):
-    carry = 0
+    carry = 1
     for item in nums[::-1]:
-        item = 1 + item + carry
+        item = item + carry
+        if item >= 10:
+            item = item - 10
+            carry = 1
+        else:
+            carry = 0
         yield item
-        carry = item - 9
+
+
+def removeDuplicates(nums):
+    lindex = 0
+    for index, _ in enumerate(nums):
+        if nums[lindex] == nums[index]:
+            continue
+        else:
+            lindex += 1
+            nums[lindex] = nums[index]
+    return lindex + 1
+
+
+def maxProfit(prices):
+    """
+    :type prices: List[int]
+    :rtype: int
+    """
+    max_diff = 0
+    for price in prices:
+        for second_price in prices:
+            if max_diff < (second_price - price):
+                max_diff = second_price - price
+                print(price, second_price, max_diff)
+
+    return max_diff
 
 
 def main():
-    for item in increment([1, 0, 0]):
-        print(item)
+    print(maxProfit([7, 6, 4, 3, 1]))
 
 
 if __name__ == "__main__":
