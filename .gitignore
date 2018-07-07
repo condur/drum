@@ -1,12 +1,23 @@
-/target
-/classes
-/checkouts
-pom.xml
-pom.xml.asc
-*.jar
-*.class
-/.lein-*
-/.nrepl-port
-.hgignore
-.hg/
 .vscode
+
+# Python
+*.pyc
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+/tests/__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+/tests/.pytest_cache/
