@@ -1,4 +1,4 @@
-from drum import remove_duplicates as rm
+from algo import remove_duplicates as rm
 
 
 def test_remove_duplicates():
