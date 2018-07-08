@@ -10,17 +10,6 @@ def increment(nums):
         yield item
 
 
-def removeDuplicates(nums):
-    lindex = 0
-    for index, _ in enumerate(nums):
-        if nums[lindex] == nums[index]:
-            continue
-        else:
-            lindex += 1
-            nums[lindex] = nums[index]
-    return lindex + 1
-
-
 def maxProfit(prices):
     """
     :type prices: List[int]
@@ -37,7 +26,7 @@ def maxProfit(prices):
 
 
 def main():
-    print(maxProfit([7, 6, 4, 3, 1]))
+    pass
 
 
 if __name__ == "__main__":
