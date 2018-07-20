@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 def increment(nums):
     carry = 1
     for item in nums[::-1]:
@@ -26,6 +29,8 @@ def maxProfit(prices):
 
 
 def main():
+    ss = {"a", "b", "c", "c"}
+    print(ss)
     pass
 
 
