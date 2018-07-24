@@ -1,3 +1,5 @@
+# Stack 
+
 A stack is an ordered list in which insertion and deletion are done al one end, called top. The last clement inserted is the first one to be deleted. Hence, il is called the Last in First out (LIPO) or First in Last out (FILO) list).
 
 Special names arc given to the two chanitcs that can be made to a stack. When an element is inserted in a stack, the concept is called _push_, and when an element is removed from the stack, the concept is called _pop_. Trying to pop out an empty stack is called _underflow_ and trying to push an clement in a full stack is called _overflow_.
