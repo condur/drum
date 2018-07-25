@@ -115,9 +115,62 @@ def strStr(haystack, needle):
     """
     if len(needle) == 0:
         return 0
+
     index = 0
     for item in partition(haystack, len(needle), 1):
         if "".join(item) == needle:
             return index
         index += 1
     return -1
+
+
+def longestCommonPrefix(strs):
+    """
+    Write a function to find the longest common prefix string amongst
+    an array of strings.
+
+    If there is no common prefix, return an empty string "".
+
+    :type strs: List[str]
+    :rtype: str
+    """
+    coll = []
+    for items in zip(*strs):
+        if items.count(items[0]) == len(items):
+            coll.append(items[0])
+        else:
+            break
+    return "".join(coll)
+
+
+def twoSum(numbers, target):
+    """
+    :type numbers: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    index1, index2 = 0, len(numbers) - 1
+    while index1 < index2:
+        if numbers[index1] + numbers[index2] < target:
+            index1 += 1
+        elif numbers[index1] + numbers[index2] > target:
+            index2 -= 1
+        elif numbers[index1] + numbers[index2] == target:
+            break
+
+    return [index1, index2]
+
+
+def removeElement(nums, val):
+    """
+    :type nums: List[int]
+    :type val: int
+    :rtype: int
+    """
+    left_idx = 0
+    for item in nums:
+        if item != val:
+            nums[left_idx] = item
+            left_idx += 1
+
+    return left_idx

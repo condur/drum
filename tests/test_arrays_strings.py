@@ -27,4 +27,22 @@ def test_partition():
 
 
 def test_strstr():
+    assert ars.strStr("hello", "") == 0
+    assert ars.strStr("hello", "e") == 1
     assert ars.strStr("hello", "ll") == 2
+    assert ars.strStr("hello", "lo") == 3
+    assert ars.strStr("hello", "o") == 4
+
+
+def test_longest_common_prefix():
+    assert ars.longestCommonPrefix(["flower", "flow", "flight"]) == "fl"
+    assert ars.longestCommonPrefix(["dog", "racecar", "car"]) == ""
+
+
+def test_twoSum():
+    assert ars.twoSum([2, 7, 11, 15], 9) == [0, 1]
+
+
+def test_removeElement():
+    assert ars.removeElement([3, 2, 2, 3], 2) == 2
+    assert ars.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2) == 5
