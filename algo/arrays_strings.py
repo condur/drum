@@ -1,4 +1,31 @@
+import sys
 import itertools
+
+
+def remove_duplicates(nums):
+    """
+    Remove Duplicates from Sorted Array
+
+    Given a sorted array nums, remove the duplicates
+    in-place such that each element appear only once
+    and return the new size.
+
+    Args:
+        nums: List[int]
+
+    Returns:
+        lindex: int
+    """
+    if len(nums) == 0:
+        return 0
+    lindex = 0
+    for index, _ in enumerate(nums):
+        if nums[lindex] == nums[index]:
+            continue
+        else:
+            lindex += 1
+            nums[lindex] = nums[index]
+    return lindex + 1
 
 
 def pivotIndex(nums) -> int:
@@ -145,6 +172,19 @@ def longestCommonPrefix(strs):
 
 def twoSum(numbers, target):
     """
+    Given an array of integers that is already sorted in ascending order,
+    find two numbers such that they add up to a specific target number.
+
+    The function twoSum should return indices of the two numbers such that
+    they add up to the target, where index1 must be less than index2.
+
+    Note:
+
+        1. Your returned answers (both index1 and index2) are not
+            zero-based.
+        2. You may assume that each input would have exactly one solution
+            and you may not use the same element twice.
+
     :type numbers: List[int]
     :type target: int
     :rtype: List[int]
@@ -163,6 +203,12 @@ def twoSum(numbers, target):
 
 def removeElement(nums, val):
     """
+    Given an array nums and a value val, remove all instances of that
+    value in-place and return the new length.
+
+    Do not allocate extra space for another array, you must do this
+    by modifying the input array in-place with O(1) extra memory.
+
     :type nums: List[int]
     :type val: int
     :rtype: int
@@ -174,3 +220,53 @@ def removeElement(nums, val):
             left_idx += 1
 
     return left_idx
+
+
+def findMaxConsecutiveOnes(nums):
+    """
+    Given a binary array, find the maximum number of consecutive 1s
+    n this array.
+
+    Note:
+
+        1. The input array will only contain 0 and 1.
+        2. The length of input array is a positive integer and will
+            not exceed 10,000
+
+    :type nums: List[int]
+    :rtype: int
+    """
+    left_idx, max_1s = -1, 0
+    for idx in range(len(nums)):
+        if nums[idx] != 1:
+            max_1s = max(max_1s, idx - left_idx - 1)
+            left_idx = idx
+        elif idx == len(nums) - 1:  # the last item in the list
+            max_1s = max(max_1s, idx - left_idx)
+
+    return max_1s
+
+
+def minSubArrayLen(s, nums):
+    """
+    Given an array of n positive integers and a positive integer s,
+    find the minimal length of a contiguous subarray of which the sum ≥ s.
+    If there isn't one, return 0 instead.
+
+    :type s: int
+    :type nums: List[int]
+    :rtype: int
+    """
+    if len(nums) == 0:
+        return 0
+
+    idx_begin, curr_sum, min_interval = 0, 0, sys.maxsize
+    for idx_end, num in enumerate(nums):
+        curr_sum += num
+        while curr_sum >= s:
+            min_interval = min(min_interval, idx_end - idx_begin + 1)
+            curr_sum -= nums[idx_begin]
+            idx_begin += 1
+
+    min_interval = 0 if min_interval == sys.maxsize else min_interval
+    return min_interval

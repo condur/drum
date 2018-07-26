@@ -1,6 +1,10 @@
 from algo import arrays_strings as ars
 
 
+def test_remove_duplicates():
+    assert ars.remove_duplicates([7, 6, 4, 3, 1, 1]) == 5
+
+
 def test_pivot_index():
     assert ars.pivotIndex([1, 2, 3, 1]) == -1
     assert ars.pivotIndex([1, 7, 3, 6, 5, 6]) == 3
@@ -39,10 +43,21 @@ def test_longest_common_prefix():
     assert ars.longestCommonPrefix(["dog", "racecar", "car"]) == ""
 
 
-def test_twoSum():
+def test_two_sum():
     assert ars.twoSum([2, 7, 11, 15], 9) == [0, 1]
 
 
-def test_removeElement():
+def test_remove_element():
     assert ars.removeElement([3, 2, 2, 3], 2) == 2
     assert ars.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2) == 5
+
+
+def test_find_max_consecutive_ones():
+    assert ars.findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]) == 3
+    assert ars.findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]) == 2
+    assert ars.findMaxConsecutiveOnes([1, 1, 0, 1]) == 2
+
+
+def test_min_sub_array_len():
+    assert ars.minSubArrayLen(7, [2, 3, 1, 2, 4, 3]) == 2
+    assert ars.minSubArrayLen(11, [1, 2, 3, 4, 5]) == 3
