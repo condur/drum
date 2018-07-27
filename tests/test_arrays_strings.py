@@ -61,3 +61,14 @@ def test_find_max_consecutive_ones():
 def test_min_sub_array_len():
     assert ars.minSubArrayLen(7, [2, 3, 1, 2, 4, 3]) == 2
     assert ars.minSubArrayLen(11, [1, 2, 3, 4, 5]) == 3
+
+
+def test_retate():
+    assert ars.rotate([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
+    assert ars.rotate_2([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
+    assert ars.rotate_3([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
+    assert ars.rotate_4([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
+    assert ars.rotate_4([1, 2], 1) == [2, 1]
+    assert ars.rotate_4([1, 2], 3) == [2, 1]
+    assert ars.rotate_4([1, 2, 3, 4, 5, 6], 2) == [5, 6, 1, 2, 3, 4]
+    assert ars.rotate_4([1, 2, 3, 4, 5, 6], 3) == [4, 5, 6, 1, 2, 3]

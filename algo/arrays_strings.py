@@ -1,5 +1,6 @@
 import sys
 import itertools
+import collections
 
 
 def remove_duplicates(nums):
@@ -270,3 +271,83 @@ def minSubArrayLen(s, nums):
 
     min_interval = 0 if min_interval == sys.maxsize else min_interval
     return min_interval
+
+
+def rotate(nums, k):
+    """
+    Given an array, rotate the array to the right by k steps,
+    where k is non-negative.
+
+    :type nums: List[int]
+    :type k: int
+    :rtype: void Do not return anything, modify nums in-place instead.
+    """
+    d = collections.deque(nums)
+    d.rotate(k)
+    return list(d)
+
+
+def rotate_2(nums, k):
+    """
+    Given an array, rotate the array to the right by k steps,
+    where k is non-negative.
+
+    :type nums: List[int]
+    :type k: int
+    :rtype: void Do not return anything, modify nums in-place instead.
+    """
+    for i in range(k):
+        item = nums.pop()
+        nums.insert(0, item)
+    return nums
+
+
+def rotate_3(nums, k):
+    """
+    Given an array, rotate the array to the right by k steps,
+    where k is non-negative.
+
+    :type nums: List[int]
+    :type k: int
+    :rtype: void Do not return anything, modify nums in-place instead.
+    """
+    k = -(k % len(nums))
+    nums[:] = nums[k:] + nums[:k]
+    return nums
+
+
+def rotate_4(nums, k):
+    """
+    Given an array, rotate the array to the right by k steps,
+    where k is non-negative.
+
+    :type nums: List[int]
+    :type k: int
+    :rtype: void Do not return anything, modify nums in-place instead.
+    """
+
+    k = k % len(nums)
+    if k == 0:
+        return
+
+    def calculate_next_idx(curr_idx, k, n):
+        next_idx = curr_idx + k
+        if next_idx >= n:
+            next_idx = next_idx - n
+        return next_idx
+
+    curr_idx = 0
+    curr_value = nums[curr_idx]
+    next_idx = curr_idx + k
+    items = {curr_idx}
+    for i in range(len(nums)):
+        nums[next_idx], curr_value = curr_value, nums[next_idx]
+        curr_idx = next_idx
+
+        if curr_idx in items:
+            curr_idx += 1
+            curr_value = nums[curr_idx]
+        items.add(curr_idx)
+
+        next_idx = calculate_next_idx(curr_idx, k, len(nums))
+    return nums
