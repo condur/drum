@@ -72,3 +72,10 @@ def test_retate():
     assert ars.rotate_4([1, 2], 3) == [2, 1]
     assert ars.rotate_4([1, 2, 3, 4, 5, 6], 2) == [5, 6, 1, 2, 3, 4]
     assert ars.rotate_4([1, 2, 3, 4, 5, 6], 3) == [4, 5, 6, 1, 2, 3]
+
+
+def test_get_pascal_trialge_row():
+    assert ars.getPascalTriangleRow(0) == [1]
+    assert ars.getPascalTriangleRow(1) == [1, 1]
+    assert ars.getPascalTriangleRow(2) == [1, 2, 1]
+    assert ars.getPascalTriangleRow(3) == [1, 3, 3, 1]

@@ -340,7 +340,7 @@ def rotate_4(nums, k):
     curr_value = nums[curr_idx]
     next_idx = curr_idx + k
     items = {curr_idx}
-    for i in range(len(nums)):
+    for _ in range(len(nums)):
         nums[next_idx], curr_value = curr_value, nums[next_idx]
         curr_idx = next_idx
 
@@ -351,3 +351,25 @@ def rotate_4(nums, k):
 
         next_idx = calculate_next_idx(curr_idx, k, len(nums))
     return nums
+
+
+def getPascalTriangleRow(rowIndex):
+    """
+    Given a non-negative index k where k ≤ 33, return the kth index
+    row of the Pascal's triangle.
+
+    In Pascal's triangle, each number is the sum of the two numbers
+    directly above it.
+
+    Note that the row index starts from 0.
+
+    :type rowIndex: int
+    :rtype: List[int]
+    """
+    deque = collections.deque([1])
+    for _ in range(rowIndex):
+        for _ in range(len(deque) - 1):
+            first = deque.pop()
+            deque.appendleft(first + deque[-1])
+        deque.appendleft(1)
+    return list(deque)
