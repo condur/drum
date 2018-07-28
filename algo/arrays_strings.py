@@ -19,14 +19,15 @@ def remove_duplicates(nums):
     """
     if len(nums) == 0:
         return 0
-    lindex = 0
-    for index, _ in enumerate(nums):
-        if nums[lindex] == nums[index]:
+
+    lidx = 0
+    for idx in range(len(nums)):
+        if lidx == idx or nums[lidx] == nums[idx]:
             continue
         else:
-            lindex += 1
-            nums[lindex] = nums[index]
-    return lindex + 1
+            lidx += 1
+            nums[lidx] = nums[idx]
+    return lidx + 1
 
 
 def pivotIndex(nums) -> int:
@@ -369,7 +370,82 @@ def getPascalTriangleRow(rowIndex):
     deque = collections.deque([1])
     for _ in range(rowIndex):
         for _ in range(len(deque) - 1):
-            first = deque.pop()
-            deque.appendleft(first + deque[-1])
+            deque.appendleft(deque.pop() + deque[-1])
         deque.appendleft(1)
     return list(deque)
+
+
+def generatePascalTriangle(numRows):
+    """
+    :type numRows: int
+    :rtype: List[List[int]]
+    """
+    result = []
+    if numRows == 0:
+        return result
+
+    deque = collections.deque([1])
+    result.append(list(deque))
+    for _ in range(numRows - 1):
+        for _ in range(len(deque) - 1):
+            deque.appendleft(deque.pop() + deque[-1])
+        deque.appendleft(1)
+        result.append(list(deque))
+
+    return result
+
+
+def reverseWords(s):
+    """
+    Given an input string, reverse the string word by word.
+
+    Note:
+
+    1.A word is defined as a sequence of non-space characters.
+    2.Input string may contain leading or trailing spaces. However,
+        your reversed string should not contain leading or trailing spaces.
+    3.You need to reduce multiple spaces between two words to a single
+        space in the reversed string.
+
+    :type s: str
+    :rtype: str
+    """
+    return " ".join(reversed(s.split()))
+
+
+def reverseWords_2(s):
+    """
+    Given a string, you need to reverse the order of characters in each
+    word within a sentence while still preserving whitespace and initial
+    word order.
+
+    :type s: str
+    :rtype: str
+    """
+    words = s.split()
+    for idx, word in enumerate(words):
+        words[idx] = word[::-1]
+
+    return " ".join(words)
+
+
+def moveZeroes(nums):
+    """
+    Given an array nums, write a function to move all 0's to the end
+    of it while maintaining the relative order of the non-zero elements.
+
+    :type nums: List[int]
+    :rtype: void Do not return anything, modify nums in-place instead.
+    """
+    lidx = 0
+    for idx in range(len(nums)):
+        if nums[idx] == 0:
+            continue
+        else:
+            nums[lidx] = nums[idx]
+            lidx += 1
+
+    for idx in range(lidx, len(nums)):
+        nums[idx] = 0
+
+    return nums

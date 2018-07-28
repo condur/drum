@@ -79,3 +79,16 @@ def test_get_pascal_trialge_row():
     assert ars.getPascalTriangleRow(1) == [1, 1]
     assert ars.getPascalTriangleRow(2) == [1, 2, 1]
     assert ars.getPascalTriangleRow(3) == [1, 3, 3, 1]
+    assert ars.generatePascalTriangle(2) == [[1], [1, 1]]
+
+
+def test_reverse_words():
+    assert ars.reverseWords(" the  sky is blue ") == "blue is sky the"
+    assert (
+        ars.reverseWords_2("Let's take LeetCode contest")
+        == "s'teL ekat edoCteeL tsetnoc"
+    )
+
+
+def test_moveZeroes():
+    assert ars.moveZeroes([0, 1, 0, 3, 12]) == [1, 3, 12, 0, 0]
