@@ -124,3 +124,18 @@ class SinglyLinkedList(object):
             current = current.get_next()
 
         return count
+
+    def hasCycle(self):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        try:
+            slow = self.head
+            fast = self.head.next
+            while slow is not fast:
+                slow = slow.next
+                fast = fast.next.next
+            return True
+        except Exception:
+            return False
