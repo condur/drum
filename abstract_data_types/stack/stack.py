@@ -7,7 +7,7 @@ class Stack(object):
 
     def __iter__(self):
         while self.is_empty() is False:
-            yield self.items.pop()
+            yield self.pop()
 
     def push(self, item):
         self.items.append(item)
