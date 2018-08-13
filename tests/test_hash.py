@@ -58,3 +58,16 @@ def test_containsNearbyDuplicate():
     assert hash.containsNearbyDuplicate([1, 2, 3, 1], 3) is True
     assert hash.containsNearbyDuplicate([1, 0, 1, 1], 1) is True
     assert hash.containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2) is False
+
+
+def test_numJewelsInStones():
+    assert hash.numJewelsInStones("aA", "aAAbbbb") == 3
+
+
+def test_lengthOfLongestSubstring():
+    assert hash.lengthOfLongestSubstring("abcabcbb") == 3
+    assert hash.lengthOfLongestSubstring("bbbbb") == 1
+    assert hash.lengthOfLongestSubstring("pwwkew") == 3
+    assert hash.lengthOfLongestSubstring("au") == 2
+    assert hash.lengthOfLongestSubstring(" ") == 1
+    assert hash.lengthOfLongestSubstring("abba") == 2

@@ -236,6 +236,11 @@ def firstUniqChar(s):
 
 def containsNearbyDuplicate(nums, k):
     """
+    Given an array of integers and an integer k, find out whether
+    there are two distinct indices i and j in the array such that
+    nums[i] = nums[j] and the absolute difference between i and j
+    is at most k.
+
     :type nums: List[int]
     :type k: int
     :rtype: bool
@@ -246,7 +251,58 @@ def containsNearbyDuplicate(nums, k):
 
     for val in filter(lambda x: len(x) > 1, dic.values()):
         for idxs in filter(lambda x: len(x) > 1, partition(val, 2, 1)):
-            if abs(idxs[0] - idxs[1]) > k:
-                return False
+            if abs(idxs[0] - idxs[1]) <= k:
+                return True
 
-    return True
+    return False
+
+
+def numJewelsInStones(J, S):
+    """
+    You're given strings J representing the types of stones that
+    are jewels, and S representing the stones you have.
+    Each character in S is a type of stone you have.
+    You want to know how many of the stones you have are also jewels.
+
+    The letters in J are guaranteed distinct, and all characters
+    in J and S are letters. Letters are case sensitive, so "a" is
+    considered a different type of stone from "A".
+
+    :type J: str
+    :type S: str
+    :rtype: int
+    """
+    count = 0
+    counter = collections.Counter(J)
+    for s in S:
+        if counter[s] > 0:
+            count += 1
+
+    return count
+
+
+def lengthOfLongestSubstring(s):
+    """
+    Given a string, find the length of the longest substring without
+    repeating characters.
+
+    Examples:
+        Given "abcabcbb", the answer is "abc", which the length is 3.
+        Given "bbbbb", the answer is "b", with the length of 1.
+        Given "pwwkew", the answer is "wke", with the length of 3.
+            Note that the answer must be a substring, "pwke" is a
+            subsequence and not a substring.
+
+    :type s: str
+    :rtype: int
+    """
+    dic = {}
+    counter = 0
+    prev_idx = 0
+    for idx, char in enumerate(s):
+        if char in dic:
+            prev_idx = max(prev_idx, dic[char] + 1)
+        counter = max(counter, idx - prev_idx + 1)
+        dic[char] = idx
+
+    return counter
