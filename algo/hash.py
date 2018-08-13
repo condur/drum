@@ -1,5 +1,6 @@
 import collections
 import itertools
+import heapq
 from algo.arrays_strings import partition
 
 
@@ -306,3 +307,22 @@ def lengthOfLongestSubstring(s):
         dic[char] = idx
 
     return counter
+
+
+def topKFrequent(nums, k):
+    """
+    Given a non-empty array of integers, return the k most frequent elements.
+
+    :type nums: List[int]
+    :type k: int
+    :rtype: List[int]
+    """
+    heap = []
+    dic = collections.defaultdict(lambda: 0)
+    for num in nums:
+        dic[num] += 1
+
+    for key, val in dic.items():
+        heapq.heappush(heap, (val, key))
+
+    return [j for _, j in heapq.nlargest(k, heap)]

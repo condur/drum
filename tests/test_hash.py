@@ -71,3 +71,8 @@ def test_lengthOfLongestSubstring():
     assert hash.lengthOfLongestSubstring("au") == 2
     assert hash.lengthOfLongestSubstring(" ") == 1
     assert hash.lengthOfLongestSubstring("abba") == 2
+
+
+def test_topKFrequent():
+    assert hash.topKFrequent([1, 1, 1, 2, 2, 3], 2) == [1, 2]
+    assert hash.topKFrequent([5, 3, 1, 1, 1, 3, 73, 1], 2) == [1, 3]
