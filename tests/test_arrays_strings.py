@@ -26,10 +26,6 @@ def test_plus_one():
     assert ars.plusOne([9]) == [1, 0]
 
 
-def test_partition():
-    assert list(ars.partition("hell", 2)) == [["h", "e"], ["l", "l"]]
-
-
 def test_strstr():
     assert ars.strStr("hello", "") == 0
     assert ars.strStr("hello", "e") == 1

@@ -1,7 +1,7 @@
 import collections
 import itertools
 import heapq
-from algo.arrays_strings import partition
+from algo.util import partition
 
 
 def containsDuplicate(nums):
