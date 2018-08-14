@@ -8,6 +8,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
+    def __str__(self):
+        return str(self.val)
+
 
 def inorder_recursive(root):
     """
@@ -109,3 +112,51 @@ def searchBST(root, val):
         return searchBST(root.left, val)
     else:
         return root
+
+
+def lowestCommonAncestor(root, p, q):
+    """
+    Given a binary search tree (BST), find the lowest common
+    ancestor (LCA) of two given nodes in the BST.
+
+    :type root: TreeNode
+    :type p: TreeNode
+    :type q: TreeNode
+    :rtype: TreeNode
+    """
+    if root is None:
+        return None
+
+    if root.val > p and root.val > q:
+        return lowestCommonAncestor(root.left, p, q)
+    elif root.val < p and root.val < q:
+        return lowestCommonAncestor(root.right, p, q)
+    else:
+        return root
+
+
+def lowestCommonAncestor_II(root, p, q):
+    """
+    Given a binary search tree (BST), find the lowest common
+    ancestor (LCA) of two given nodes in the BST.
+
+    :type root: TreeNode
+    :type p: TreeNode
+    :type q: TreeNode
+    :rtype: TreeNode
+    """
+    if root is None:
+        return None
+
+    if root.val == p or root.val == q:
+        return root
+
+    left_found = lowestCommonAncestor_II(root.left, p, q)
+    right_found = lowestCommonAncestor_II(root.right, p, q)
+
+    if left_found and right_found:
+        return root  # lca
+    elif left_found:
+        return left_found
+    elif right_found:
+        return right_found
