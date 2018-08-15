@@ -160,3 +160,113 @@ def lowestCommonAncestor_II(root, p, q):
         return left_found
     elif right_found:
         return right_found
+
+
+def maxDepth(root, depth=0):
+    """
+    Given a binary tree, find its maximum depth.
+
+    The maximum depth is the number of nodes along the
+    longest path from the root node down to the farthest leaf node.
+
+    :type root: TreeNode
+    :rtype: int
+    """
+    if root is None:
+        return depth
+
+    return max(maxDepth(root.left, depth + 1), maxDepth(root.right, depth + 1))
+
+
+def maxDepth_II(root):
+    """
+    Given a binary tree, find its maximum depth.
+
+    The maximum depth is the number of nodes along the
+    longest path from the root node down to the farthest leaf node.
+
+    :type root: TreeNode
+    :rtype: int
+    """
+
+    if root is None:
+        return 0
+
+    return 1 + max(maxDepth_II(root.left), maxDepth_II(root.right))
+
+
+def isSymmetric(root):
+    """
+    Given a binary tree, check whether it is a mirror of itself
+    (ie, symmetric around its center).
+
+    :type root: TreeNode
+    :rtype: bool
+    """
+
+    def is_reverse(a, b):
+        # if not a or not b:
+        #     return not a and not b
+        if not a and not b:
+            return True
+        elif not a or not b:
+            return False
+        else:
+            return (
+                a.val == b.val
+                and is_reverse(a.left, b.right)
+                and is_reverse(a.right, b.left)
+            )
+
+    if not root:
+        return True
+
+    return is_reverse(root.left, root.right)
+
+
+def sortedArrayToBST(nums):
+    """
+    Given an array where elements are sorted in ascending order,
+    convert it to a height balanced BST.
+
+    For this problem, a height-balanced binary tree is defined
+    as a binary tree in which the depth of the two subtrees of
+    every node never differ by more than 1.
+
+    :type nums: List[int]
+    :rtype: TreeNode
+    """
+    if not nums:
+        return None
+
+    mid = len(nums) // 2
+    node = TreeNode(nums[mid])
+    node.left = sortedArrayToBST(nums[:mid])
+    node.right = sortedArrayToBST(nums[mid + 1 :])
+    return node
+
+
+def sortedArrayToBST_II(nums):
+    """
+    Given an array where elements are sorted in ascending order,
+    convert it to a height balanced BST.
+
+    For this problem, a height-balanced binary tree is defined
+    as a binary tree in which the depth of the two subtrees of
+    every node never differ by more than 1.
+
+    :type nums: List[int]
+    :rtype: TreeNode
+    """
+
+    def dfs(l, r):
+        if l > r:
+            return None
+
+        mid = l + (r - l) // 2
+        node = TreeNode(nums[mid])
+        node.left = dfs(l, mid - 1)
+        node.right = dfs(mid + 1, r)
+        return node
+
+    return dfs(0, len(nums) - 1)
