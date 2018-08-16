@@ -88,3 +88,35 @@ def test_reverse_words():
 
 def test_moveZeroes():
     assert ars.moveZeroes([0, 1, 0, 3, 12]) == [1, 3, 12, 0, 0]
+
+
+def test_reverse():
+    assert ars.reverse(123) == 321
+    assert ars.reverse(-123) == -321
+    assert ars.reverse(120) == 21
+    assert ars.reverse(-120) == -21
+    assert ars.reverse(-1) == -1
+    assert ars.reverse(1534236469) == 0
+
+
+def test_isPalindrome():
+    assert ars.isPalindrome("A man, a plan, a canal: Panama") is True
+
+
+def test_myAtoi():
+    assert ars.myAtoi("42") == 42
+    assert ars.myAtoi("      -42") == -42
+    assert ars.myAtoi("4193 with words") == 4193
+    assert ars.myAtoi("words and 987") == 0
+    assert ars.myAtoi("-") == 0
+    assert ars.myAtoi("0-1") == 0
+    assert ars.myAtoi("+1") == 1
+    assert ars.myAtoi("+") == 0
+
+
+def test_missingNumber():
+    assert ars.missingNumber([3, 0, 1]) == 2
+    assert ars.missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]) == 8
+    assert ars.missingNumber([0]) == 1
+    assert ars.missingNumber([1, 2]) == 0
+    assert ars.missingNumber([1]) == 0

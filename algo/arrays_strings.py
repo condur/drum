@@ -1,5 +1,6 @@
 import sys
 import collections
+import itertools
 from algo.util import partition
 
 
@@ -127,11 +128,9 @@ def strStr(haystack, needle):
     if len(needle) == 0:
         return 0
 
-    index = 0
-    for item in partition(haystack, len(needle), 1):
+    for idx, item in enumerate(partition(haystack, len(needle), 1)):
         if "".join(item) == needle:
-            return index
-        index += 1
+            return idx
     return -1
 
 
@@ -431,3 +430,136 @@ def moveZeroes(nums):
         nums[idx] = 0
 
     return nums
+
+
+def reverse(x):
+    """
+    Given a 32-bit signed integer, reverse digits of an integer.
+
+    :type x: int
+    :rtype: int
+    """
+    s = str(x)
+    if len(s) == 1:
+        return x
+
+    res = []
+    if x < 0:
+        res.append("-")
+        res.extend(s[::-1])
+        res.pop()
+    else:
+        res = s[::-1]
+
+    reversed = int("".join(res))
+    if -2 ** 31 <= reversed <= 2 ** 31 - 1:
+        return reversed
+
+    return 0
+
+
+def isAnagram(s, t):
+    """
+    Given two strings s and t , write a function to determine
+    if t is an anagram of s.
+
+    :type s: str
+    :type t: str
+    :rtype: bool
+    """
+    dic = collections.defaultdict(lambda: 0)
+    for i in s:
+        dic[i] += 1
+
+    for j in t:
+        if j not in dic:
+            return False
+        else:
+            dic[j] -= 1
+
+    return all(value == 0 for value in dic.values())
+
+
+def isPalindrome(s):
+    """
+    Given a string, determine if it is a palindrome, considering
+    only alphanumeric characters and ignoring cases.
+
+    Note: For the purpose of this problem, we define empty string
+    as valid palindrome.
+
+    :type s: str
+    :rtype: bool
+    """
+
+    str1 = filter(lambda x: x.isalnum(), s)
+    str2 = filter(lambda x: x.isalnum(), s[::-1])
+
+    return all(s1.lower() == s2.lower() for s1, s2 in zip(str1, str2))
+
+
+def myAtoi(str):
+    """
+    Implement atoi which converts a string to an integer.
+
+    The function first discards as many whitespace characters
+    as necessary until the first non-whitespace character is found.
+    Then, starting from this character, takes an optional initial
+    plus or minus sign followed by as many numerical digits as
+    possible, and interprets them as a numerical value.
+
+    The string can contain additional characters after those
+    that form the integral number, which are ignored and have
+    no effect on the behavior of this function.
+
+    If the first sequence of non-whitespace characters in str
+    is not a valid integral number, or if no such sequence
+    exists because either str is empty or it contains only
+    whitespace characters, no conversion is performed.
+
+    If no valid conversion could be performed, a zero value is returned.
+
+    :type str: str
+    :rtype: int
+    """
+    str = str.lstrip()
+    if len(str) == 0:
+        return 0
+
+    signs = list(itertools.takewhile(lambda x: x == "-" or x == "+", str))
+    if len(signs) > 1:
+        return 0
+
+    if len(signs) > 0 and (signs[0] == "-" or signs[0] == "+"):  # signed
+        digits = list(itertools.takewhile(lambda x: x.isdigit(), str[1:]))
+    else:
+        digits = list(itertools.takewhile(lambda x: x.isdigit(), str))
+
+    if len(digits) == 0:
+        return 0
+
+    num = (
+        -1 * int("".join(digits))
+        if len(signs) == 1 and signs[0] == "-"  # negative number
+        else int("".join(digits))
+    )
+
+    if num < -2 ** 31:
+        return -2 ** 31
+    elif num > 2 ** 31 - 1:
+        return 2 ** 31 - 1
+    else:
+        return num
+
+
+def missingNumber(nums):
+    """
+    Given an array containing n distinct numbers taken
+    from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+    :type nums: List[int]
+    :rtype: int
+    """
+    n = len(nums)
+    sum_formula = (n * (n + 1)) // 2
+    return sum_formula - sum(nums)
