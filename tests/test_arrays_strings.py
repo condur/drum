@@ -59,6 +59,10 @@ def test_min_sub_array_len():
     assert ars.minSubArrayLen(11, [1, 2, 3, 4, 5]) == 3
 
 
+def test_maxSubArray():
+    assert ars.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6
+
+
 def test_retate():
     assert ars.rotate([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
     assert ars.rotate_2([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
@@ -120,3 +124,8 @@ def test_missingNumber():
     assert ars.missingNumber([0]) == 1
     assert ars.missingNumber([1, 2]) == 0
     assert ars.missingNumber([1]) == 0
+
+
+def test_climbStairs():
+    assert ars.climbStairs(2) == 2
+    assert ars.climbStairs(3) == 3

@@ -255,6 +255,27 @@ def minSubArrayLen(s, nums):
     return min_interval
 
 
+def maxSubArray(nums):
+    """
+    Given an integer array nums, find the contiguous subarray
+    (containing at least one number) which has the largest sum
+    and return its sum.
+
+    :type nums: List[int]
+    :rtype: int
+    """
+    if not nums:
+        return 0
+
+    maximum = running_total = nums[0]
+
+    for n in nums[1:]:
+        running_total = max(running_total + n, n)
+        maximum = max(running_total, maximum)
+
+    return maximum
+
+
 def rotate(nums, k):
     """
     Given an array, rotate the array to the right by k steps,
@@ -563,3 +584,38 @@ def missingNumber(nums):
     n = len(nums)
     sum_formula = (n * (n + 1)) // 2
     return sum_formula - sum(nums)
+
+
+def fibonacci():
+    """
+    Fibonacci Sequence
+    """
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+
+def climbStairs(n):
+    """
+    You are climbing a stair case. It takes n steps to reach to the top.
+
+    Each time you can either climb 1 or 2 steps. In how many distinct
+    ways can you climb to the top?
+
+    Note: Given n will be a positive integer.
+
+    This is like a Fibonacci sequence just is starting with 1, 2
+    :type n: int
+    :rtype: int
+    """
+
+    class FibonacciIterator(object):
+        def __iter__(self):
+            a, b = 1, 2
+            while True:
+                yield a
+                a, b = b, a + b
+
+    res = list(itertools.islice(FibonacciIterator(), n - 1, n))
+    return res[0]
