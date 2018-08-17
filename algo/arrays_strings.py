@@ -594,28 +594,3 @@ def fibonacci():
     while True:
         yield a
         a, b = b, a + b
-
-
-def climbStairs(n):
-    """
-    You are climbing a stair case. It takes n steps to reach to the top.
-
-    Each time you can either climb 1 or 2 steps. In how many distinct
-    ways can you climb to the top?
-
-    Note: Given n will be a positive integer.
-
-    This is like a Fibonacci sequence just is starting with 1, 2
-    :type n: int
-    :rtype: int
-    """
-
-    class FibonacciIterator(object):
-        def __iter__(self):
-            a, b = 1, 2
-            while True:
-                yield a
-                a, b = b, a + b
-
-    res = list(itertools.islice(FibonacciIterator(), n - 1, n))
-    return res[0]

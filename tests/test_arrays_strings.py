@@ -124,8 +124,3 @@ def test_missingNumber():
     assert ars.missingNumber([0]) == 1
     assert ars.missingNumber([1, 2]) == 0
     assert ars.missingNumber([1]) == 0
-
-
-def test_climbStairs():
-    assert ars.climbStairs(2) == 2
-    assert ars.climbStairs(3) == 3
