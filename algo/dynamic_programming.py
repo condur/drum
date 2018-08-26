@@ -1,4 +1,5 @@
 import functools
+import sys
 
 
 def rob_top_down(nums):
@@ -123,3 +124,98 @@ def climbStairs_bottom_up_fib(n):
         a, b = b, a + b
 
     return b
+
+
+def increasingTriplet_bottom_up(nums):
+    """
+    Given an unsorted array return whether an increasing subsequence
+    of length 3 exists or not in the array.
+
+    Formally the function should:
+
+        Return true if there exists i, j, k
+        such that arr[i] < arr[j] < arr[k] given 0 ≤ i < j < k ≤ n-1
+            else return false.
+
+    Note: Your algorithm should run in O(n) time complexity and O(1)
+    space complexity.
+
+    :type nums: List[int]
+    :rtype: bool
+    """
+    tabu = [False] * len(nums)
+    for i in range(1, len(nums)):
+        for j in range(i - 1, -1, -1):
+            if nums[i] > nums[j]:
+                if tabu[j] is True:
+                    return True
+                tabu[i] = True
+
+    return False
+
+
+def increasingTriplet(nums):
+    first = second = sys.maxsize
+    for n in nums:
+        if n <= first:
+            first = n
+        elif n <= second:
+            second = n
+        else:
+            return True
+    return False
+
+
+def canJump_top_down(nums):
+    """
+    Given an array of non-negative integers, you are initially
+    positioned at the first index of the array.
+
+    Each element in the array represents your maximum jump length
+    at that position.
+
+    Determine if you are able to reach the last index.
+
+    :type nums: List[int]
+    :rtype: bool
+    """
+
+    @functools.lru_cache()
+    def canJumpIdx(fromIdx, toIdx):
+        if toIdx == 0:
+            return nums[toIdx] >= fromIdx - toIdx
+
+        if nums[toIdx] >= fromIdx - toIdx:
+            return canJumpIdx(toIdx, toIdx - 1)
+        else:
+            return canJumpIdx(fromIdx, toIdx - 1)
+
+    return canJumpIdx(len(nums) - 1, len(nums) - 2)
+
+
+def coinChangeTotal(coins, amount):
+    """
+    You are given coins of different denominations and a total amount
+    of money amount. Write a function to compute the total number of
+    variations that are valid.
+
+    :type coins: List[int]
+    :type amount: int
+    :rtype: int
+    """
+
+    # @functools.lru_cache()
+    def combo(amount, currentCoin):
+        if amount == 0:
+            return 1
+        elif amount < 0:
+            return 0
+        else:
+            nCombos = 0
+            coin = currentCoin
+            while coin < len(coins):
+                nCombos += combo(amount - coins[coin], coin)
+                coin += 1
+            return nCombos
+
+    return combo(amount, 0)

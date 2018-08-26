@@ -519,6 +519,37 @@ def isPalindrome(s):
     return all(s1.lower() == s2.lower() for s1, s2 in zip(str1, str2))
 
 
+def longestPalindrome(s):
+    """
+    Given a string s, find the longest palindromic substring in s.
+    You may assume that the maximum length of s is 1000.
+
+    :type s: str
+    :rtype: str
+    """
+
+    def isPalindrom(s, start, end):
+        str1 = s[start : end + 1]
+        str2 = s[end : start + 1 : -1]
+        return all(s1 == s2 for s1, s2 in zip(str1, str2))
+
+    dic = collections.defaultdict(list)
+    for idx, char in enumerate(s):
+        dic[char].append(idx)
+
+    max_length, max_start, max_end = 0, 0, 0
+    for char, idxs in filter(lambda item: len(item[1]) > 1, dic.items()):
+        for start in idxs:
+            for end in idxs:
+                if start != end and isPalindrom(s, start, end):
+                    if end - start > max_length:
+                        max_length = end - start
+                        max_start = start
+                        max_end = end + 1
+
+    return s[0] if max_length == 0 else s[max_start:max_end]
+
+
 def myAtoi(str):
     """
     Implement atoi which converts a string to an integer.

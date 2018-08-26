@@ -107,6 +107,12 @@ def test_isPalindrome():
     assert ars.isPalindrome("A man, a plan, a canal: Panama") is True
 
 
+def test_longestPalindrome():
+    assert ars.longestPalindrome("babad") == "bab"
+    assert ars.longestPalindrome("ac") == "a"
+    assert ars.longestPalindrome("ccc") == "ccc"
+
+
 def test_myAtoi():
     assert ars.myAtoi("42") == 42
     assert ars.myAtoi("      -42") == -42
