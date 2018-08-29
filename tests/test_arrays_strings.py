@@ -63,7 +63,7 @@ def test_maxSubArray():
     assert ars.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6
 
 
-def test_retate():
+def test_rotate():
     assert ars.rotate([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
     assert ars.rotate_2([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]
     assert ars.rotate_3([1, 2, 3, 4, 5, 6, 7], 3) == [5, 6, 7, 1, 2, 3, 4]

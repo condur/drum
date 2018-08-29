@@ -69,7 +69,47 @@ def isValidBST(root):
     return True
 
 
-def valid_bst(node, min_val, max_val):
+def bst_checker(root):
+    """
+    Given a binary tree, determine if it is a valid binary search tree (BST).
+
+    Assume a BST is defined as follows:
+
+        1. The left subtree of a node contains only nodes with keys
+            less than the node's key.
+        2. The right subtree of a node contains only nodes with keys
+            greater than the node's key.
+        3. Both the left and right subtrees must also be binary search trees.
+
+    :type root: TreeNode
+    :rtype: bool
+    """
+    # start at the root, with an arbitrarily low lower bound
+    # and an arbitrarily high upper bound
+    node_and_bounds_stack = [(root, -float("inf"), float("inf"))]
+
+    # depth-first traversal
+    while len(node_and_bounds_stack):
+        node, lower_bound, upper_bound = node_and_bounds_stack.pop()
+
+        # if this node is invalid, we return false right away
+        if (node.value < lower_bound) or (node.value > upper_bound):
+            return False
+
+        if node.left:
+            # this node must be less than the current node
+            node_and_bounds_stack.append((node.left, lower_bound, node.value))
+
+        if node.right:
+            # this node must be greater than the current node
+            node_and_bounds_stack.append((node.right, node.value, upper_bound))
+
+    # if none of the nodes were invalid, return true
+    # (at this point we have checked all nodes)
+    return True
+
+
+def valid_bst(node, lower_bound=-float("inf"), upper_bound=float("inf")):
     """
     Given a binary tree, determine if it is a valid binary search tree (BST).
 
@@ -86,10 +126,12 @@ def valid_bst(node, min_val, max_val):
     """
     if not node:
         return True
-    if node.val <= min_val or node.val >= max_val:
+
+    if (node.val <= lower_bound) or (node.val >= upper_bound):
         return False
-    return valid_bst(node.left, min_val, node.val) and valid_bst(
-        node.right, node.val, max_val
+
+    return valid_bst(node.left, lower_bound, node.val) and valid_bst(
+        node.right, node.val, upper_bound
     )
 
 
@@ -193,6 +235,36 @@ def maxDepth_II(root):
         return 0
 
     return 1 + max(maxDepth_II(root.left), maxDepth_II(root.right))
+
+
+def maxDepth_III(root):
+    """
+    Given a binary tree, find its maximum depth.
+
+    The maximum depth is the number of nodes along the
+    longest path from the root node down to the farthest leaf node.
+
+    :type root: TreeNode
+    :rtype: int
+    """
+    if not root:
+        return 0
+
+    max_depth = 0
+    nodes = []  # stack
+    nodes.append((root, 1))
+
+    while nodes:
+        node, depth = nodes.pop()
+        max_depth = max(max_depth, depth)
+
+        if node.left:
+            nodes.append((node.left, depth + 1))
+
+        if node.right:
+            nodes.append((node.right, depth + 1))
+
+    return max_depth
 
 
 def isSymmetric(root):

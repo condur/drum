@@ -1,10 +1,11 @@
 import sys
 import collections
 import itertools
+import random
 from algo.util import partition
 
 
-def remove_duplicates(nums):
+def remove_duplicates(nums) -> int:
     """
     Remove Duplicates from Sorted Array
 
@@ -113,7 +114,7 @@ def plusOne(digits):
     return digits
 
 
-def strStr(haystack, needle):
+def strStr(haystack, needle) -> int:
     """
     Return the index of the first occurrence of
     needle in haystack, or -1 if needle is not part of haystack.
@@ -172,16 +173,17 @@ def twoSum(numbers, target):
     :type target: int
     :rtype: List[int]
     """
-    index1, index2 = 0, len(numbers) - 1
-    while index1 < index2:
-        if numbers[index1] + numbers[index2] < target:
-            index1 += 1
-        elif numbers[index1] + numbers[index2] > target:
-            index2 -= 1
-        elif numbers[index1] + numbers[index2] == target:
+    left, right = 0, len(numbers) - 1
+    while left < right:
+        two_sum = numbers[left] + numbers[right]
+        if two_sum < target:
+            left += 1
+        elif two_sum > target:
+            right -= 1
+        elif two_sum == target:
             break
 
-    return [index1, index2]
+    return [left, right]
 
 
 def removeElement(nums, val):
@@ -196,13 +198,13 @@ def removeElement(nums, val):
     :type val: int
     :rtype: int
     """
-    left_idx = 0
+    left = 0
     for item in nums:
         if item != val:
-            nums[left_idx] = item
-            left_idx += 1
+            nums[left] = item
+            left += 1
 
-    return left_idx
+    return left
 
 
 def findMaxConsecutiveOnes(nums):
@@ -219,13 +221,13 @@ def findMaxConsecutiveOnes(nums):
     :type nums: List[int]
     :rtype: int
     """
-    left_idx, max_1s = -1, 0
-    for idx in range(len(nums)):
-        if nums[idx] != 1:
-            max_1s = max(max_1s, idx - left_idx - 1)
-            left_idx = idx
-        elif idx == len(nums) - 1:  # the last item in the list
-            max_1s = max(max_1s, idx - left_idx)
+    left, max_1s = -1, 0
+    for right in range(len(nums)):
+        if nums[right] != 1:
+            max_1s = max(max_1s, right - left - 1)
+            left = right
+        elif right == len(nums) - 1:  # the last item in the list
+            max_1s = max(max_1s, right - left)
 
     return max_1s
 
@@ -243,16 +245,16 @@ def minSubArrayLen(s, nums):
     if len(nums) == 0:
         return 0
 
-    idx_begin, curr_sum, min_interval = 0, 0, sys.maxsize
-    for idx_end, num in enumerate(nums):
-        curr_sum += num
+    left, curr_sum, min_in = 0, 0, float("inf")
+    for right in range(len(nums)):
+        curr_sum += nums[right]
         while curr_sum >= s:
-            min_interval = min(min_interval, idx_end - idx_begin + 1)
-            curr_sum -= nums[idx_begin]
-            idx_begin += 1
+            min_in = min(min_in, right - left + 1)
+            curr_sum -= nums[left]
+            left += 1
 
-    min_interval = 0 if min_interval == sys.maxsize else min_interval
-    return min_interval
+    min_in = 0 if min_in == float("inf") else min_in
+    return min_in
 
 
 def maxSubArray(nums):
@@ -299,9 +301,8 @@ def rotate_2(nums, k):
     :type k: int
     :rtype: void Do not return anything, modify nums in-place instead.
     """
-    for i in range(k):
-        item = nums.pop()
-        nums.insert(0, item)
+    for _ in range(k):
+        nums.insert(0, nums.pop())
     return nums
 
 
@@ -333,26 +334,26 @@ def rotate_4(nums, k):
     if k == 0:
         return
 
-    def calculate_next_idx(curr_idx, k, n):
-        next_idx = curr_idx + k
-        if next_idx >= n:
-            next_idx = next_idx - n
-        return next_idx
+    def calculate_next(curr, k, n):
+        next = curr + k
+        if next >= n:
+            next = next - n
+        return next
 
-    curr_idx = 0
-    curr_value = nums[curr_idx]
-    next_idx = curr_idx + k
-    items = {curr_idx}
+    curr = 0
+    curr_value = nums[curr]
+    next = curr + k
+    items = {curr}
     for _ in range(len(nums)):
-        nums[next_idx], curr_value = curr_value, nums[next_idx]
-        curr_idx = next_idx
+        nums[next], curr_value = curr_value, nums[next]
+        curr = next
 
-        if curr_idx in items:
-            curr_idx += 1
-            curr_value = nums[curr_idx]
-        items.add(curr_idx)
+        if curr in items:
+            curr += 1
+            curr_value = nums[curr]
+        items.add(curr)
 
-        next_idx = calculate_next_idx(curr_idx, k, len(nums))
+        next = calculate_next(curr, k, len(nums))
     return nums
 
 
@@ -439,15 +440,15 @@ def moveZeroes(nums):
     :type nums: List[int]
     :rtype: void Do not return anything, modify nums in-place instead.
     """
-    lidx = 0
-    for idx in range(len(nums)):
-        if nums[idx] == 0:
+    left = 0
+    for right in range(len(nums)):
+        if nums[right] == 0:
             continue
         else:
-            nums[lidx] = nums[idx]
-            lidx += 1
+            nums[left] = nums[right]
+            left += 1
 
-    for idx in range(lidx, len(nums)):
+    for idx in range(left, len(nums)):
         nums[idx] = 0
 
     return nums
@@ -484,6 +485,10 @@ def isAnagram(s, t):
     Given two strings s and t , write a function to determine
     if t is an anagram of s.
 
+    An anagram is a word or phrase formed by rearranging the
+    letters of a different word or phrase, typically using all
+    the original letters exactly once.
+
     :type s: str
     :type t: str
     :rtype: bool
@@ -498,7 +503,7 @@ def isAnagram(s, t):
         else:
             dic[j] -= 1
 
-    return all(value == 0 for value in dic.values())
+    return all(val == 0 for val in dic.values())
 
 
 def isPalindrome(s):
@@ -528,9 +533,9 @@ def longestPalindrome(s):
     :rtype: str
     """
 
-    def isPalindrom(s, start, end):
-        str1 = s[start : end + 1]
-        str2 = s[end : start + 1 : -1]
+    def isPalindrom(s, left, right):
+        str1 = s[left : right + 1]  # noqa E203
+        str2 = s[right : left + 1 : -1]  # noqa E203
         return all(s1 == s2 for s1, s2 in zip(str1, str2))
 
     dic = collections.defaultdict(list)
@@ -625,3 +630,32 @@ def fibonacci():
     while True:
         yield a
         a, b = b, a + b
+
+
+def shuffle(the_list):
+    def get_random(floor, ceiling):
+        return random.randrange(floor, ceiling + 1)
+
+    # if it's 1 or 0 items, just return
+    if len(the_list) <= 1:
+        return the_list
+
+    last_index_in_the_list = len(the_list) - 1
+
+    # walk through from beginning to end
+    for index_we_are_choosing_for in range(0, len(the_list) - 1):
+        # choose a random not-yet-placed item to place there
+        # (could also be the item currently in that spot)
+        # must be an item AFTER the current item, because the stuff
+        # before has all already been placed
+        random_choice_index = get_random(
+            index_we_are_choosing_for, last_index_in_the_list
+        )
+        # place our random choice in the spot by swapping
+        if random_choice_index != index_we_are_choosing_for:
+            the_list[index_we_are_choosing_for], the_list[
+                random_choice_index
+            ] = (  # noqa E501
+                the_list[random_choice_index],
+                the_list[index_we_are_choosing_for],
+            )

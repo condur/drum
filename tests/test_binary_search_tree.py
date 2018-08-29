@@ -54,6 +54,7 @@ def test_maxDepth():
     node4 = bst.TreeNode(4, node2, node5)
     assert bst.maxDepth(node4) == 3
     assert bst.maxDepth_II(node4) == 3
+    assert bst.maxDepth_III(node4) == 3
 
 
 def test_isSymmetric():

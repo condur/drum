@@ -9,11 +9,11 @@ def containsDuplicate(nums):
     :type nums: List[int]
     :rtype: bool
     """
-    s = set()
-    for _, item in enumerate(nums):
-        if item in s:
+    seen = set()
+    for num in nums:
+        if num in seen:
             return True
-        s.add(item)
+        seen.add(num)
 
     return False
 
@@ -92,7 +92,7 @@ def isHappy(n):
     def get_square_sum(num):
         square_sum = 0
         for i in map(int, str(n)):
-            square_sum += pow(i, 2)
+            square_sum += i ** 2
         return square_sum
 
     seen = set()
@@ -136,7 +136,7 @@ def twoSum_2(nums, target):
     dic = {}
     for idx, key in enumerate(nums):
         complement = target - key
-        if complement in dic.keys():
+        if complement in dic:
             return [dic[complement], idx]
         dic[key] = idx
 
