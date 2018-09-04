@@ -29,7 +29,7 @@ def partition(list, step, pad=0):
     """
     pad = step if pad == 0 else pad
     for i in range(0, len(list), pad):
-        res = list[i : i + step]
+        res = list[i : i + step]  # noqa E203
         if len(res) < step:
             return
         yield tuple(res)

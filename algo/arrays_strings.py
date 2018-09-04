@@ -1,4 +1,3 @@
-import sys
 import collections
 import itertools
 import random
@@ -105,8 +104,8 @@ def plusOne(digits):
     increment_by = 1
     for idx in range(len(digits) - 1, -1, -1):
         incremented = digits[idx] + increment_by
-        increment_by = incremented // 10
         digits[idx] = incremented % 10
+        increment_by = incremented // 10
 
     if increment_by > 0:
         digits.insert(0, increment_by)
@@ -145,13 +144,13 @@ def longestCommonPrefix(strs):
     :type strs: List[str]
     :rtype: str
     """
-    coll = []
+    res = []
     for items in zip(*strs):
         if items.count(items[0]) == len(items):
-            coll.append(items[0])
+            res.append(items[0])
         else:
             break
-    return "".join(coll)
+    return "".join(res)
 
 
 def twoSum(numbers, target):
@@ -316,7 +315,7 @@ def rotate_3(nums, k):
     :rtype: void Do not return anything, modify nums in-place instead.
     """
     k = -(k % len(nums))
-    nums[:] = nums[k:] + nums[:k]
+    nums = nums[k:] + nums[:k]
     return nums
 
 

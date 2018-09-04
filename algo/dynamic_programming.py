@@ -135,7 +135,7 @@ def increasingTriplet_bottom_up(nums):
 
         Return true if there exists i, j, k
         such that arr[i] < arr[j] < arr[k] given 0 ≤ i < j < k ≤ n-1
-            else return false.
+        else return false.
 
     Note: Your algorithm should run in O(n) time complexity and O(1)
     space complexity.
@@ -218,4 +218,27 @@ def coinChangeTotal(coins, amount):
                 coin += 1
             return nCombos
 
-    return combo(amount, 0)
+        return combo(amount, 0)
+
+
+def change_possibilities_bottom_up(amount, denominations):
+    """
+    You are given coins of different denominations and a total amount
+    of money amount. Write a function to compute the total number of
+    variations that are valid.
+
+    :type coins: List[int]
+    :type amount: int
+    :rtype: int
+    """
+    ways_of_doing_n_cents = [0] * (amount + 1)
+    ways_of_doing_n_cents[0] = 1
+
+    for coin in denominations:
+        for higher_amount in range(coin, amount + 1):
+            higher_amount_remainder = higher_amount - coin
+            ways_of_doing_n_cents[higher_amount] += ways_of_doing_n_cents[
+                higher_amount_remainder
+            ]
+
+    return ways_of_doing_n_cents[amount]

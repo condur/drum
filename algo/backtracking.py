@@ -1,22 +1,3 @@
-def permute(nums):
-    """
-    :type nums: List[int]
-    :rtype: List[List[int]]
-    """
-    level = child = 0
-    max_level = len(nums) - 1
-    while True:
-        while level < max_level:
-            nums[level], nums[level + child] = nums[level + child], nums[level]
-            level += 1
-
-        yield nums
-
-        while level + child < max_level:
-            level -= 1
-            child += 1
-
-
 def coinChangeTotalStack(coins, amount):
     """
     You are given coins of different denominations and a total amount
@@ -47,7 +28,7 @@ def coinChangeTotalStack(coins, amount):
     #         return nCombos
 
     def combo(amount):
-        stack = [(amount, 0)]
+        stack = [(amount, 0)]  # amount, coin index
         while stack:
             current_amount, coin = stack[-1]
             while current_amount > 0:

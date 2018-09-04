@@ -251,7 +251,7 @@ def containsNearbyDuplicate(nums, k):
         dic[char].append(idx)
 
     for val in filter(lambda x: len(x) > 1, dic.values()):
-        for idxs in filter(lambda x: len(x) > 1, partition(val, 2, 1)):
+        for idxs in partition(val, 2, 1):
             if abs(idxs[0] - idxs[1]) <= k:
                 return True
 
@@ -299,12 +299,12 @@ def lengthOfLongestSubstring(s):
     """
     dic = {}
     counter = 0
-    prev_idx = 0
-    for idx, char in enumerate(s):
+    left = 0
+    for right, char in enumerate(s):
         if char in dic:
-            prev_idx = max(prev_idx, dic[char] + 1)
-        counter = max(counter, idx - prev_idx + 1)
-        dic[char] = idx
+            left = max(left, dic[char] + 1)
+        counter = max(counter, right - left + 1)
+        dic[char] = right
 
     return counter
 
