@@ -3,6 +3,8 @@ from algo import arrays_strings as ars
 
 def test_remove_duplicates():
     assert ars.remove_duplicates([7, 6, 4, 3, 1, 1]) == 5
+    assert ars.remove_duplicates([7, 6, 4, 3, 3, 1]) == 5
+    assert ars.remove_duplicates([7, 7, 4, 3, 3, 1]) == 4
 
 
 def test_pivot_index():

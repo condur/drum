@@ -3,23 +3,583 @@
 	{
 		"selected_items":
 		[
+			[
+				"the",
+				"the_list"
+			],
+			[
+				"flo",
+				"floor\tparam"
+			],
+			[
+				"ran",
+				"randrange\tstatement"
+			],
+			[
+				"index",
+				"index_sum\tstatement"
+			],
+			[
+				"inde",
+				"index_sum\tstatement"
+			],
+			[
+				"list",
+				"listn\tstatement"
+			],
+			[
+				"max",
+				"max_depth\tstatement"
+			],
+			[
+				"r",
+				"right\tstatement"
+			],
+			[
+				"node",
+				"nodes\tstatement"
+			],
+			[
+				"b",
+				"backtracking\tmodule"
+			],
+			[
+				"cons",
+				"coins\tparam"
+			],
+			[
+				"combo",
+				"combo_stack\tfunction"
+			],
+			[
+				"coi",
+				"coin\tstatement"
+			],
+			[
+				"co",
+				"coin\tstatement"
+			],
+			[
+				"ci",
+				"coin\tstatement"
+			],
+			[
+				"coin",
+				"coin\tstatement"
+			],
+			[
+				"sol",
+				"solution\tstatement"
+			],
+			[
+				"so",
+				"solutions\tparam"
+			],
+			[
+				"re",
+				"remove\tfunction"
+			],
+			[
+				"curre",
+				"currentCoin\tparam"
+			],
+			[
+				"soli",
+				"solutions\tparam"
+			],
+			[
+				"from",
+				"fromIdx\tparam"
+			],
+			[
+				"to",
+				"toIdx\tparam"
+			],
+			[
+				"ca",
+				"canJumpIdx\tfunction"
+			],
+			[
+				"Can",
+				"canJumpIdx\tfunction"
+			],
+			[
+				"str",
+				"str2\tstatement"
+			],
+			[
+				"ma",
+				"max_start\tstatement"
+			],
+			[
+				"id",
+				"idxs\tstatement"
+			],
+			[
+				"cl",
+				"climbStairs_bottom_up\tfunction"
+			],
+			[
+				"num",
+				"num\tstatement"
+			],
+			[
+				"nu",
+				"num\tstatement"
+			],
+			[
+				"cu",
+				"curr_sum\tstatement"
+			],
+			[
+				"fi",
+				"fibonacci\tfunction"
+			],
+			[
+				"sum",
+				"sum_nums\tstatement"
+			],
+			[
+				"min",
+				"min_v\tstatement"
+			],
+			[
+				"pref",
+				"prefixed_num\tstatement"
+			],
+			[
+				"fil",
+				"filtered_str\tstatement"
+			],
+			[
+				"reve",
+				"reversed\tstatement"
+			],
+			[
+				"ino",
+				"inorder_recursive"
+			],
+			[
+				"m",
+				"maxDepth_II\tfunction"
+			],
+			[
+				"no",
+				"node8\tstatement"
+			],
+			[
+				"Stop",
+				"StopIteration\tclass"
+			],
+			[
+				"in",
+				"inorder_stack\tfunction"
+			],
+			[
+				"pa",
+				"partition_list\tfunction"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"t",
+				"TreeNode\tclass"
+			],
+			[
+				"is",
+				"isValidBST\tfunction"
+			],
+			[
+				"mi",
+				"mid\tstatement"
+			],
+			[
+				"md",
+				"mid_square\tstatement"
+			],
+			[
+				"res",
+				"result\tstatement"
+			],
+			[
+				"hea",
+				"heap\tstatement"
+			],
+			[
+				"pre",
+				"prev_idx\tstatement"
+			],
+			[
+				"coun",
+				"counter\tstatement"
+			],
+			[
+				"ite",
+				"item"
+			],
+			[
+				"val",
+				"values\tfunction"
+			],
+			[
+				"i",
+				"idx2\tstatement"
+			],
+			[
+				"arr",
+				"arrays_strings\tmodule"
+			],
+			[
+				"dic",
+				"dic2\tstatement"
+			],
+			[
+				"file",
+				"filter\tfunction"
+			],
+			[
+				"de",
+				"defaultdict\tclass"
+			],
+			[
+				"di",
+				"dic2\tstatement"
+			],
+			[
+				"li",
+				"list2\tparam"
+			],
+			[
+				"Tue",
+				"True\tinstance"
+			],
+			[
+				"item",
+				"item1\tstatement"
+			],
+			[
+				"a",
+				"add"
+			],
+			[
+				"set",
+				"set2\tstatement"
+			],
+			[
+				"se",
+				"set2\tstatement"
+			],
+			[
+				"s",
+				"seen\tstatement"
+			],
+			[
+				"nex",
+				"next_symbol\tstatement"
+			],
+			[
+				"get",
+				"get_next_leaf\tfunction"
+			],
+			[
+				"if",
+				"is_leaf\tfunction"
+			],
+			[
+				"ne",
+				"next_level\tstatement"
+			],
+			[
+				"sy",
+				"symbol\tparam"
+			],
+			[
+				"sym",
+				"symbols\tstatement"
+			],
+			[
+				"chi",
+				"children\tstatement"
+			],
+			[
+				"el",
+				"elif"
+			],
+			[
+				"sta",
+				"stack"
+			],
+			[
+				"ope",
+				"operators\tstatement"
+			],
+			[
+				"en",
+				"set_ending"
+			],
+			[
+				"ge",
+				"get_children\tfunction"
+			],
+			[
+				"po",
+				"popleft\tfunction"
+			],
+			[
+				"ap",
+				"append\tfunction"
+			],
+			[
+				"ape",
+				"append_left"
+			],
+			[
+				"new",
+				"newNode\tstatement"
+			],
+			[
+				"word",
+				"words\tstatement"
+			],
+			[
+				"part",
+				"partition\tfunction"
+			],
+			[
+				"c",
+				"curr_idx\tstatement"
+			],
+			[
+				"cur",
+				"curr_idx\tparam"
+			],
+			[
+				"cal",
+				"calculate_next_idx\tfunction"
+			],
+			[
+				"next",
+				"next_idx\tstatement"
+			],
+			[
+				"cure",
+				"current_idx\tstatement"
+			],
+			[
+				"ins",
+				"insert"
+			],
+			[
+				"idx",
+				"idx_end\tstatement"
+			],
+			[
+				"idx_",
+				"idx_start\tstatement"
+			],
+			[
+				"lef",
+				"left_idx\tstatement"
+			],
+			[
+				"ine",
+				"index2\tstatement"
+			],
+			[
+				"lo",
+				"longestCommonPrefix\tfunction"
+			],
+			[
+				"iter",
+				"itertools\tmodule"
+			],
+			[
+				"it",
+				"itertools\tmodule"
+			],
+			[
+				"n",
+				"needle\tparam"
+			],
+			[
+				"h",
+				"haystack\tparam"
+			],
+			[
+				"inc",
+				"increment_by\tstatement"
+			],
+			[
+				"nums",
+				"nums\tparam"
+			],
+			[
+				"d",
+				"dominantIndex\tfunction"
+			],
+			[
+				"Inde",
+				"IndexError\tclass"
+			],
+			[
+				"ab",
+				"abstract_data_types\tmodule"
+			],
+			[
+				"l",
+				"linked_list\tmodule"
+			],
+			[
+				"No",
+				"None\tinstance"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/main.py",
+			"file": "algo/arrays_strings.py",
 			"settings":
 			{
-				"buffer_size": 889,
+				"buffer_size": 16770,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "tests/test_sample.py",
+			"file": "algo/util.py",
 			"settings":
 			{
-				"buffer_size": 75,
+				"buffer_size": 1282,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/backtracking.py",
+			"settings":
+			{
+				"buffer_size": 1751,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/dynamic_programming.py",
+			"settings":
+			{
+				"buffer_size": 6359,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/binary_search.py",
+			"settings":
+			{
+				"buffer_size": 6866,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/binary_search_tree.py",
+			"settings":
+			{
+				"buffer_size": 8801,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/hash.py",
+			"settings":
+			{
+				"buffer_size": 8014,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/queues.py",
+			"settings":
+			{
+				"buffer_size": 1092,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/sort_search.py",
+			"settings":
+			{
+				"buffer_size": 989,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo/stacks.py",
+			"settings":
+			{
+				"buffer_size": 814,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_arrays_strings.py",
+			"settings":
+			{
+				"buffer_size": 4083,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_dynamic_programming.py",
+			"settings":
+			{
+				"buffer_size": 1254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_hash.py",
+			"settings":
+			{
+				"buffer_size": 2286,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_stacks.py",
+			"settings":
+			{
+				"buffer_size": 452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_binary_search.py",
+			"settings":
+			{
+				"buffer_size": 1883,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_backtracking.py",
+			"settings":
+			{
+				"buffer_size": 172,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_binary_search_tree.py",
+			"settings":
+			{
+				"buffer_size": 2324,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -85,16 +645,72 @@
 				"Package Control: Upgrade Package"
 			],
 			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"unfo",
+				"Code Folding: Unfold All"
+			],
+			[
+				"m",
+				"MarkdownEditing: Fold All Sections"
+			],
+			[
+				"mak",
+				"MarkdownEditing: Run markdownlint"
+			],
+			[
+				"markd",
+				"MarkdownEditing: Run markdownlint"
+			],
+			[
 				"insta",
 				"Package Control: Install Package"
 			],
 			[
-				"pac",
-				"Preferences: Browse Packages"
+				"set syntax",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remv",
+				"Package Control: Remove Package"
+			],
+			[
+				"sliw",
+				"Markdown Slideshow"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
 			],
 			[
 				"remo",
 				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
 			],
 			[
 				"in",
@@ -102,10 +718,6 @@
 			],
 			[
 				"rem",
-				"Package Control: Remove Package"
-			],
-			[
-				"re",
 				"Package Control: Remove Package"
 			],
 			[
@@ -119,10 +731,6 @@
 			[
 				"git p",
 				"Set Syntax: Git Graph"
-			],
-			[
-				"upda",
-				"Package Control: Upgrade Package"
 			],
 			[
 				"tes",
@@ -149,10 +757,6 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
 				"anaconda te",
 				"Anaconda: Run Project Tests"
 			],
@@ -169,24 +773,12 @@
 				"Package Control: Upgrade/Overwrite All Packages"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			],
 			[
 				"pyth",
 				"Build With: Python3"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
-				"mark",
-				"Markdown Preview: Preview in Browser"
 			],
 			[
 				"lis",
@@ -252,16 +844,68 @@
 	"expanded_folders":
 	[
 		"/Users/dima/dev/drum",
-		"/Users/dima/dev/drum/src",
+		"/Users/dima/dev/drum/algo",
 		"/Users/dima/dev/drum/tests"
 	],
 	"file_history":
 	[
-		"/Users/dima/dev/drum/src/main.py",
-		"/Users/dima/.zshrc",
-		"/Users/dima/dev/drum/setup.py",
-		"/Users/dima/dev/drum/.gitignore",
+		"/Users/dima/dev/drum/abstract_data_types/linked_list/singly.py",
+		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/dima/dev/drum/tests/test_linked_list.py",
+		"/Users/dima/dev/drum/algo/stacks.py",
+		"/Users/dima/.zshrc",
+		"/Users/dima/dev/drum/tests/test_binary_search.py",
+		"/Users/dima/dev/drum/algo/util.py",
+		"/Users/dima/dev/drum/tests/test_util.py",
+		"/Users/dima/dev/drum/tests/test_binary_search_tree.py",
+		"/Users/dima/dev/drum/tests/test_backtracking.py",
+		"/Users/dima/dev/drum/tests/test_hash.py",
+		"/Users/dima/dev/drum/tests/test_dynamic_programming.py",
+		"/Users/dima/dev/drum/tests/test_sort_search.py",
+		"/Users/dima/dev/drum/tests/test_arrays_strings.py",
+		"/Users/dima/dev/drum/algo/arrays_strings.py",
+		"/Users/dima/dev/drum/algo/dynamic_programming.py",
+		"/Users/dima/dev/drum/algo/backtracking.py",
+		"/Users/dima/dev/drum/algo/hash.py",
+		"/Users/dima/dev/drum/algo/queues.py",
+		"/Users/dima/dev/drum/algo/sort_search.py",
+		"/Users/dima/dev/drum/algo/binary_search_tree.py",
+		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/User/Word Highlight.sublime-settings",
+		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/WordHighlight/Word Highlight.sublime-settings",
+		"/Users/dima/dev/drum/abstract_data_types/trees/info.md",
+		"/Users/dima/dev/drum/tests/test_stacks.py",
+		"/Users/dima/dev/drum/tests/test_queues.py",
+		"/Users/dima/dev/drum/algo/binary_search.py",
+		"/Users/dima/dev/drum/abstract_data_types/stack/stack.py",
+		"/Users/dima/dev/drum/abstract_data_types/stack/info.md",
+		"/Users/dima/dev/drum/algo/remove_duplicates.py",
+		"/Users/dima/dev/drum/tests/test_remove_duplicates.py",
+		"/Users/dima/dev/drum/tests/test_stack.py",
+		"/Users/dima/dev/drum/abstract_data_types/linked_list/info.md",
+		"/Users/dima/dev/drum/abstract_data_types/trees/__init__.py",
+		"/Users/dima/dev/drum/abstract_data_types/linked_list/__init__.py",
+		"/Users/dima/dev/drum/algo/__init__.py",
+		"/Users/dima/dev/drum/abstract_data_types/stack/__init__.py",
+		"/Users/dima/dev/drum/abstract_data_types/__init__.py",
+		"/Users/dima/dev/drum/abstract_data_types/linked_list/node.py",
+		"/Users/dima/dev/drum/algo/main.py",
+		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings",
+		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/User/Bold and Italic Markers.tmPreferences",
+		"/Users/dima/dev/drum/tests/abstract_data_types/linked_list/test_linked_list.py",
+		"/Users/dima/dev/drum/tests/linked_list/test_linked_list.py",
+		"/Users/dima/dev/drum/abstract_data_types/linked_list/Node.py",
+		"/Users/dima/dev/drum/abstract_data_types/linked_list/singly/Node.py",
+		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/dima/dev/drum/data_structures/linkedlist/def.md",
+		"/Users/dima/dev/drum/data/linked",
+		"/Users/dima/dev/drum/data/linked_list.py",
+		"/Users/dima/dev/drum/LICENSE",
+		"/Users/dima/dev/drum/.gitignore",
+		"/Users/dima/dev/drum/src/__init__.py",
+		"/Users/dima/dev/drum/src/main.py",
+		"/Users/dima/dev/drum/drum.sublime-project",
+		"/Users/dima/dev/drum/setup.py",
 		"/Users/dima/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
 	],
 	"find":
@@ -273,6 +917,7 @@
 		"height": 134.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -280,6 +925,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"permut",
+			"rand",
+			"shu",
+			"random",
+			"shuffle",
+			"suffle",
+			"join",
+			"flake",
+			"git",
+			"remove",
+			"remove_",
+			"remove_ele",
+			"remove",
+			"memo",
+			"sub arra",
+			"sys",
+			"number",
+			"missing",
+			"strstr",
+			"default",
+			"e-",
+			"lambda",
+			"par",
+			"parti",
+			"binary_search",
+			"twoSum",
+			"for",
+			"part",
+			"size",
+			"max",
+			"digits",
+			"length",
+			"head",
 			"main",
 			"mail"
 		],
@@ -289,6 +967,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"tabu",
+			"bs",
+			"size"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -299,32 +980,240 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/main.py",
+					"file": "algo/arrays_strings.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 889,
+						"buffer_size": 16770,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								546,
-								546
+								13123,
+								13123
 							]
 						],
 						"settings":
 						{
-							"SL.13.region_keys":
+							"SL.131.region_keys":
 							[
+								"SL.flake8.Highlights.|77b37aa4a716db410aa102e4d03d3df5cda180db8ea77f451d3ef675f50f1a2f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|1d7bd7362a1a8ab4d53dc39ad680f7ace6a60267f83d9f1fb2ffacba21d22714|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|e4de7b332283c5281c768596db8b91695de19b0b14469a6244bef8600904d7a7|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"SL.14.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.28.region_keys":
+							[
+								"SL.flake8.Highlights.|1ad06e64f342b4de487f8298230366a9c9422733f1ec61c6aeadf8d97987f472|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|707675a5a150f5c7bff6227b99d292362083108fa99b1e3dd44ec0cc9d2f0be4|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|6a56427e9751a372f6b3514380cea1d20fe1a55ded9e2c0caf24285c4106c51e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|0c2ad10b2adf2f1d39729feac85905b51063591a26b26fdb8ccbdf116e184298|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15391.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "algo/util.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1281,
+								1281
+							]
+						],
+						"settings":
+						{
+							"SL.26.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "algo/backtracking.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1015,
+								1015
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+								"SL.flake8.Highlights.|7ff265df276f613bfe84d0a5a4299112e8374a9cffa0a6e37112e06fea2b09fe|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"SL.24.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|7ff265df276f613bfe84d0a5a4299112e8374a9cffa0a6e37112e06fea2b09fe|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 159.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "algo/dynamic_programming.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3203,
+								3203
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+								"sublime_linter.protected_regions"
 							],
 							"SL.17.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.26.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "algo/binary_search.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6676,
+								6676
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"SL.48.region_keys":
 							[
 							],
 							"git_gutter_is_enabled": true,
@@ -333,50 +1222,569 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 36.0,
+						"translation.y": 6341.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "tests/test_sample.py",
+					"buffer": 5,
+					"file": "algo/binary_search_tree.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 75,
+						"buffer_size": 8801,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75,
-								75
+								6968,
+								6968
 							]
 						],
 						"settings":
 						{
-							"SL.14.region_keys":
+							"SL.145.region_keys":
 							[
+								"SL.flake8.Highlights.|4600178ec3a4f6b541e36b26dcae64e696f947b956b96b2c1ab670fe702d54a1|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot"
 							],
 							"SL.15.region_keys":
 							[
+								"SL.flake8.Highlights.|7439ae18f4094744e588050efc08c53f9279a2167e9a27f101a18e493870ed11|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot"
 							],
-							"SL.18.region_keys":
+							"SL.17.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|7439ae18f4094744e588050efc08c53f9279a2167e9a27f101a18e493870ed11|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot"
+							],
+							"SL.19.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
 							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6775.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "algo/hash.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7843,
+								7843
+							]
+						],
+						"settings":
+						{
+							"SL.31.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7091.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "algo/queues.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.33.region_keys":
+							[
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|8cdd06e1ba22c3ba5a901c8e8c8e86f7d80a95eda7e2fc94e480ae9bd4454e83|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "algo/sort_search.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.34.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "algo/stacks.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"SL.35.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"file": "tests/test_arrays_strings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3154,
+								3154
+							]
+						],
+						"settings":
+						{
+							"SL.140.region_keys":
+							[
+							],
+							"SL.16.region_keys":
+							[
+							],
+							"SL.19.region_keys":
+							[
+							],
+							"SL.20.region_keys":
+							[
+							],
+							"SL.32.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2191.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "tests/test_dynamic_programming.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								907,
+								907
+							]
+						],
+						"settings":
+						{
+							"SL.21.region_keys":
+							[
+							],
+							"SL.27.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "tests/test_hash.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1625,
+								1625
+							]
+						],
+						"settings":
+						{
+							"SL.32.region_keys":
+							[
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|aa4850447809f6d03751c966b613958375930be4b46bc2382e7c1c331c0ecc69|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 841.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "tests/test_stacks.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"SL.36.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Python 3/Python3.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "algo/binary_search.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"SL.48.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "tests/test_binary_search.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.29.region_keys":
+							[
+								"SL.flake8.Highlights.|cd82a1f0405c56587bf998d6d8b23123a28277857a11c0fbdd1df2e3340811b5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|c4299a35049f5b8da30cf624e3b594fcf58b54ca0f173a8272e8d2722614e43c|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|e42bf80798424bf45327f29337e755482bae510bc7b5658f753e0f6bacfaa1d4|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|e2854c649e5b011035f5f5066464f7ca1f2f012c89ef9553f288a6a9a77e639d|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"SL.39.region_keys":
+							[
+								"SL.flake8.Highlights.|cd82a1f0405c56587bf998d6d8b23123a28277857a11c0fbdd1df2e3340811b5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|e42bf80798424bf45327f29337e755482bae510bc7b5658f753e0f6bacfaa1d4|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|c4299a35049f5b8da30cf624e3b594fcf58b54ca0f173a8272e8d2722614e43c|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|e2854c649e5b011035f5f5066464f7ca1f2f012c89ef9553f288a6a9a77e639d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "tests/test_backtracking.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"SL.22.region_keys":
+							[
+							],
+							"SL.30.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "tests/test_binary_search_tree.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1723,
+								1723
+							]
+						],
+						"settings":
+						{
+							"SL.150.region_keys":
+							[
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|2d7f96e6972ea14f0b45babc21819b0bd7c3bec4de1f98c352dc6975a95c226e|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|3f188de46a340811f2a32dcf701ef7a7887dc2f7eb07ff9dbe40dd012c0bee89|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.17.region_keys":
+							[
+								"SL.flake8.Highlights.|2d7f96e6972ea14f0b45babc21819b0bd7c3bec4de1f98c352dc6975a95c226e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|3f188de46a340811f2a32dcf701ef7a7887dc2f7eb07ff9dbe40dd012c0bee89|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
 					"type": "text"
 				}
 			]
@@ -399,11 +1807,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.534143517466,
 			1.0
 		],
 		"rows":
@@ -429,6 +1844,14 @@
 	{
 		"height": 0.0
 	},
+	"output.mde":
+	{
+		"height": 168.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
 	"pinned_build_system": "",
 	"project": "drum.sublime-project",
 	"replace":
@@ -443,37 +1866,93 @@
 		"selected_items":
 		[
 			[
-				"mai",
-				"src/main.py"
+				"dyn",
+				"algo/dynamic_programming.py"
 			],
 			[
-				"",
-				"src/linked_list.py"
+				"test_bin",
+				"tests/test_binary_search.py"
+			],
+			[
+				"bina",
+				"algo/binary_search.py"
+			],
+			[
+				"u",
+				"algo/util.py"
+			],
+			[
+				"test_ba",
+				"tests/test_backtracking.py"
+			],
+			[
+				"test_dyn",
+				"tests/test_dynamic_programming.py"
+			],
+			[
+				"dyna",
+				"algo/dynamic_programming.py"
+			],
+			[
+				"ba",
+				"algo/backtracking.py"
+			],
+			[
+				"link_list",
+				"abstract_data_types/linked_list/singly.py"
 			],
 			[
 				"lin",
-				"src/linked_list.py"
+				"tests/test_linked_list.py"
+			],
+			[
+				"sta",
+				"algo/stacks.py"
+			],
+			[
+				"test_ar",
+				"tests/test_arrays_strings.py"
+			],
+			[
+				"arr",
+				"algo/arrays_strings.py"
+			],
+			[
+				"lis",
+				"LICENSE"
+			],
+			[
+				"re",
+				"algo/remove_duplicates.py"
+			],
+			[
+				"",
+				"src/remove_duplicates.py"
+			],
+			[
+				"mai",
+				"src/main.py"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 379.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 696.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -482,8 +1961,8 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 266.0,
+	"side_bar_visible": false,
+	"side_bar_width": 232.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

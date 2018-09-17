@@ -193,6 +193,30 @@ def canJump_top_down(nums):
     return canJumpIdx(len(nums) - 1, len(nums) - 2)
 
 
+def canJump_bottom_up(nums):
+    """
+    Given an array of non-negative integers, you are initially
+    positioned at the first index of the array.
+
+    Each element in the array represents your maximum jump length
+    at that position.
+
+    Determine if you are able to reach the last index.
+
+    :type nums: List[int]
+    :rtype: bool
+    """
+
+    n = len(nums)
+    if n == 1:
+        return True
+    leftmost = n - 1
+    for i in range(n - 2, -1, -1):
+        if nums[i] + i >= leftmost:
+            leftmost = i
+    return leftmost == 0
+
+
 def coinChangeTotal(coins, amount):
     """
     You are given coins of different denominations and a total amount
@@ -242,3 +266,17 @@ def change_possibilities_bottom_up(amount, denominations):
             ]
 
     return ways_of_doing_n_cents[amount]
+
+
+def lengthOfLIS(nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    tabu = [1] * len(nums)
+    for i in range(1, len(nums)):
+        for j in range(i - 1, -1, -1):
+            if nums[i] > nums[j]:
+                tabu[i] = max(tabu[i], tabu[j] + 1)
+
+    return max(tabu)

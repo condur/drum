@@ -314,7 +314,7 @@ def sortedArrayToBST(nums):
     mid = len(nums) // 2
     node = TreeNode(nums[mid])
     node.left = sortedArrayToBST(nums[:mid])
-    node.right = sortedArrayToBST(nums[mid + 1 :])
+    node.right = sortedArrayToBST(nums[mid + 1 :])  # noqa E203
     return node
 
 

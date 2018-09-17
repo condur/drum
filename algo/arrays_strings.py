@@ -21,14 +21,14 @@ def remove_duplicates(nums) -> int:
     if len(nums) == 0:
         return 0
 
-    lidx = 0
-    for idx in range(len(nums)):
-        if lidx == idx or nums[lidx] == nums[idx]:
+    left = 0
+    for right in range(len(nums)):
+        if left == right or nums[left] == nums[right]:
             continue
         else:
-            lidx += 1
-            nums[lidx] = nums[idx]
-    return lidx + 1
+            left += 1
+            nums[left] = nums[right]
+    return left + 1
 
 
 def pivotIndex(nums) -> int:
@@ -106,6 +106,8 @@ def plusOne(digits):
         incremented = digits[idx] + increment_by
         digits[idx] = incremented % 10
         increment_by = incremented // 10
+        if increment_by == 0:
+            break
 
     if increment_by > 0:
         digits.insert(0, increment_by)
@@ -198,9 +200,9 @@ def removeElement(nums, val):
     :rtype: int
     """
     left = 0
-    for item in nums:
-        if item != val:
-            nums[left] = item
+    for right in nums:
+        if right != val:
+            nums[left] = right
             left += 1
 
     return left

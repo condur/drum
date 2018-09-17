@@ -33,3 +33,10 @@ def test_increasingTriplet():
 def test_canJump():
     assert dp.canJump_top_down([2, 3, 1, 1, 4]) is True
     assert dp.canJump_top_down([3, 2, 1, 0, 4]) is False
+    assert dp.canJump_bottom_up([2, 3, 1, 1, 4]) is True
+    assert dp.canJump_bottom_up([3, 2, 1, 0, 4]) is False
+
+
+def test_lengthOFLIS():
+    assert dp.lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]) == 4
+    assert dp.lengthOfLIS([1, 3, 6, 7, 9, 4, 10, 5, 6]) == 6
