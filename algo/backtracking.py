@@ -50,3 +50,10 @@ def coinChangeTotalStack(coins, amount):
                 stack.append((current_amount - coins[coin], coin))
 
     return min([len(x) for x in combo(amount)])
+
+
+def permute(nums):
+    """
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """

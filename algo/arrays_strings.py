@@ -270,13 +270,13 @@ def maxSubArray(nums):
     if not nums:
         return 0
 
-    maximum = running_total = nums[0]
+    max_ending_here = max_so_far = nums[0]
 
     for n in nums[1:]:
-        running_total = max(running_total + n, n)
-        maximum = max(running_total, maximum)
+        max_so_far = max(n, max_so_far + n)
+        max_ending_here = max(max_so_far, max_ending_here)
 
-    return maximum
+    return max_ending_here
 
 
 def rotate(nums, k):
@@ -535,8 +535,8 @@ def longestPalindrome(s):
     """
 
     def isPalindrom(s, left, right):
-        str1 = s[left : right + 1]  # noqa E203
-        str2 = s[right : left + 1 : -1]  # noqa E203
+        str1 = s[left : right + 1]
+        str2 = s[right : left + 1 : -1]
         return all(s1 == s2 for s1, s2 in zip(str1, str2))
 
     dic = collections.defaultdict(list)
@@ -654,9 +654,7 @@ def shuffle(the_list):
         )
         # place our random choice in the spot by swapping
         if random_choice_index != index_we_are_choosing_for:
-            the_list[index_we_are_choosing_for], the_list[
-                random_choice_index
-            ] = (  # noqa E501
+            the_list[index_we_are_choosing_for], the_list[random_choice_index] = (
                 the_list[random_choice_index],
                 the_list[index_we_are_choosing_for],
             )

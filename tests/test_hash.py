@@ -14,7 +14,8 @@ def test_intersection():
 
 
 def test_intersect():
-    assert hash.intersect([4, 9, 5], [9, 4, 9, 8, 4]) == [9, 9, 4, 4]
+    assert hash.intersect([4, 9, 5], [9, 4, 9, 8, 4]) == [9, 4]
+    assert hash.intersect([1, 2, 2, 1], [2, 2]) == [2, 2]
 
 
 def test_isHappy():

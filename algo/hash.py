@@ -62,16 +62,18 @@ def intersect(nums1, nums2):
     :type nums2: List[int]
     :rtype: List[int]
     """
-    dic1 = collections.defaultdict(list)  # defaults to list
+    dict = collections.defaultdict(lambda: 0)  # defaults to 0
     for num in nums1:
-        dic1[num].append(num)
+        dict[num] += 1
 
-    dic2 = collections.defaultdict(list)  # defaults to list
+    res = []
     for num in nums2:
-        if num in dic1:
-            dic2[num] += dic1[num]
+        if num in dict:
+            if dict[num] > 0:
+                dict[num] -= 1
+                res.append(num)
 
-    return list(itertools.chain(*dic2.values()))
+    return res
 
 
 def isHappy(n):
