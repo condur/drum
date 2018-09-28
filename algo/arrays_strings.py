@@ -658,3 +658,31 @@ def shuffle(the_list):
                 the_list[random_choice_index],
                 the_list[index_we_are_choosing_for],
             )
+
+
+def setZeroes(matrix):
+    """
+    Given a m x n matrix, if an element is 0, set its entire
+    row and column to 0. Do it in-place.
+
+    :type matrix: List[List[int]]
+    :rtype: void Do not return anything, modify matrix in-place instead.
+    """
+    row_len = len(matrix)
+    col_len = len(matrix[0])
+
+    first_row = [None] * row_len
+    first_col = [None] * col_len
+
+    for i in range(row_len):
+        for j in range(col_len):
+            if matrix[i][j] == 0:
+                first_row[i] = 0
+                first_col[j] = 0
+
+    for i in range(row_len):
+        for j in range(col_len):
+            if first_row[i] == 0 or first_col[j] == 0:
+                matrix[i][j] = 0
+
+    return matrix

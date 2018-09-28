@@ -12,3 +12,12 @@ def test_quicksort():
 def test_findKthLargest():
     assert ss.findKthLargest([3, 2, 1, 5, 6, 4], 2) == 5
     assert ss.findKthLargest([99, 99], 1) == 99
+
+
+def test_merge_intervals():
+    assert ss.merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [
+        [1, 6],
+        [8, 10],
+        [15, 18],
+    ]
+    assert ss.merge_intervals([[1, 4], [2, 3]]) == [[1, 4]]

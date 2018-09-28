@@ -113,3 +113,26 @@ def findKthLargest(nums, k):
 
     # the list is already sorted
     return nums[len(nums) - k]
+
+
+def merge_intervals(intervals):
+    """
+    Given a collection of intervals, merge all overlapping intervals.
+
+    :type intervals: List[Interval]
+    :rtype: List[Interval]
+    """
+    intervals.sort(key=lambda i: i[0])
+    res = [intervals[0]]
+    for current in intervals[1:]:
+        last = res[-1]
+        if last[1] >= current[1]:
+            continue
+        elif last[1] >= current[0]:
+            # in place update: res[-1][1] = current[1]
+            res.pop()
+            res.append([last[0], current[1]])
+        else:
+            res.append(current)
+
+    return res
