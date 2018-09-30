@@ -136,3 +136,29 @@ def merge_intervals(intervals):
             res.append(current)
 
     return res
+
+
+def searchMatrix(matrix, target):
+    """
+    Write an efficient algorithm that searches for a value in an m x n matrix.
+    This matrix has the following properties:
+        1. Integers in each row are sorted in ascending from left to right.
+        2. Integers in each column are sorted in ascending from top to bottom.
+
+    :type matrix: List[List[int]]
+    :type target: int
+    :rtype: bool
+    """
+    if len(matrix) == 0:
+        return False
+
+    x, y, matrix_size = len(matrix) - 1, 0, len(matrix[0]) - 1
+    while x >= 0 and y <= matrix_size:
+        if matrix[x][y] == target:
+            return True
+        elif matrix[x][y] > target:
+            x -= 1
+        else:
+            y += 1
+
+    return False

@@ -21,3 +21,17 @@ def test_merge_intervals():
         [15, 18],
     ]
     assert ss.merge_intervals([[1, 4], [2, 3]]) == [[1, 4]]
+
+
+def test_searchMatrix():
+    matrix = [
+        [1, 4, 7, 11, 15],
+        [2, 5, 8, 12, 19],
+        [3, 6, 9, 16, 22],
+        [10, 13, 14, 17, 24],
+        [18, 21, 23, 26, 30],
+    ]
+    assert ss.searchMatrix(matrix, 12) is True
+    assert ss.searchMatrix(matrix, 20) is False
+    assert ss.searchMatrix([[1, 3, 5]], 2) is False
+    assert ss.searchMatrix([[-5]], -5) is True
