@@ -52,6 +52,58 @@ def coinChangeTotalStack(coins, amount):
     return min([len(x) for x in combo(amount)])
 
 
+def generateParenthesis(n):
+    """
+    Given n pairs of parentheses, write a function to generate all
+    combinations of well-formed parentheses. 
+    
+    :type n: int
+    :rtype: List[str]
+    """
+
+    def _backtrack(stack, n):
+        if stack:
+            _, last_opened, _, = stack.pop()
+            if stack:
+                _, next_to_open, next_to_close = stack[-1]
+                while stack and last_opened == next_to_open:
+                    _, last_opened, _, = stack.pop()
+                    if stack:
+                        _, next_to_open, next_to_close = stack[-1]
+
+                if next_to_close == n:
+                    _backtrack(stack, n)
+
+                if next_to_close == next_to_open:
+                    _backtrack(stack, n)
+
+    def _generateParenthesis(n):
+        open_par, closed_par = "(", ")"
+        stack = [(open_par, 1, 0)]
+        while stack:
+            # add opened parentheses
+            _, opened, closed = stack[-1]
+            while opened < n:
+                opened += 1
+                stack.append((open_par, opened, closed))
+
+            # validate the success leaf
+            _, opened, closed = stack[-1]
+            if opened == n and closed == n:
+                yield "".join([par for par, _, _ in stack])
+
+            # backtrack
+            if closed == n:
+                _backtrack(stack, n)
+
+            # add closed parenthesis
+            if stack:
+                _, opened, closed = stack[-1]
+                stack.append((closed_par, opened, closed + 1))
+
+    return list(_generateParenthesis(n))
+
+
 def permute(nums):
     """
     :type nums: List[int]
