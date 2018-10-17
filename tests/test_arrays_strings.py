@@ -134,6 +134,13 @@ def test_missingNumber():
     assert ars.missingNumber([1]) == 0
 
 
+def test_suffle():
+    assert ars.shuffle(0) == [0]
+    assert ars.shuffle(1) == [1]
+    assert ars.shuffle(5) != [1, 2, 3, 4, 5]
+    assert ars.shuffle(10) != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
 def test_setZeroes():
     matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
     assert ars.setZeroes(matrix) == [[1, 0, 1], [0, 0, 0], [1, 0, 1]]

@@ -106,6 +106,9 @@ def generateParenthesis(n):
 
 def permute(nums):
     """
+    Given a collection of distinct integers, return all possible
+    permutations.
+
     :type nums: List[int]
     :rtype: List[List[int]]
     """

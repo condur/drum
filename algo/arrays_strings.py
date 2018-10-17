@@ -633,31 +633,31 @@ def fibonacci():
         a, b = b, a + b
 
 
-def shuffle(the_list):
-    def get_random(floor, ceiling):
-        return random.randrange(floor, ceiling + 1)
+def shuffle(n):
+    """
+    Input a single integer N. Output the integers 1..N in random order.
+    """
+    # if it's 0 or 1 items
+    if n <= 1:
+        return [n]
 
-    # if it's 1 or 0 items, just return
-    if len(the_list) <= 1:
-        return the_list
+    # generate the list 1..N
+    the_list = []
+    for i in range(1, n + 1):
+        the_list.append(i)
 
-    last_index_in_the_list = len(the_list) - 1
-
-    # walk through from beginning to end
-    for index_we_are_choosing_for in range(0, len(the_list) - 1):
+    # loop through list indexes
+    for i in range(0, n):
         # choose a random not-yet-placed item to place there
         # (could also be the item currently in that spot)
-        # must be an item AFTER the current item, because the stuff
+        # must be an item AFTER the current item, because the numbers
         # before has all already been placed
-        random_choice_index = get_random(
-            index_we_are_choosing_for, last_index_in_the_list
-        )
-        # place our random choice in the spot by swapping
-        if random_choice_index != index_we_are_choosing_for:
-            the_list[index_we_are_choosing_for], the_list[random_choice_index] = (
-                the_list[random_choice_index],
-                the_list[index_we_are_choosing_for],
-            )
+        random_index = random.randrange(i, n)
+        # place the random choice in the spot by swapping
+        if random_index != i:
+            the_list[i], the_list[random_index] = the_list[random_index], the_list[i]
+
+    return the_list
 
 
 def setZeroes(matrix):

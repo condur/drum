@@ -1,4 +1,4 @@
-import itertools
+import itertools, time
 
 
 def partition_iterable(iterable, step, pad=0):
@@ -33,3 +33,38 @@ def partition(list, step, pad=0):
         if len(res) < step:
             return
         yield tuple(res)
+
+
+def preudo_random_generator(n, total=5):
+    """
+    Linear congruential generator implementation 
+    """
+
+    def lcg(n, seed):
+        """
+        Linear congruential generator
+        https://en.wikipedia.org/wiki/Linear_congruential_generator
+        
+        Parameters:
+            The same as for Java's java.util.Random, POSIX, glibc
+            modulus m: 2 ** 48
+            multiplier a: 25214903917
+            increment c: 11
+
+        Args:
+            n (int): the top limit
+            seed (int): a number used to initialize a
+                        pseudorandom number generator. 
+
+        Yields:
+            int: random numbers in the n limit
+        """
+        modulus = 2 ** 48
+        a = 25214903917
+        c = 11
+        while True:
+            seed = (a * seed + c) % modulus
+            yield (seed % n) + 1
+
+    seed = int(time.time())
+    return itertools.islice(lcg(n, seed), total)
